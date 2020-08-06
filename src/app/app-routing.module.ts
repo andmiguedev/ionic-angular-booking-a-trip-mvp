@@ -9,7 +9,7 @@ const routes: Routes = [
   },
   {
     path: "",
-    redirectTo: "home",
+    redirectTo: "nearby-places",
     pathMatch: "full",
   },
   {
@@ -32,10 +32,10 @@ const routes: Routes = [
       ),
   },
   {
-    path: "trip-places",
+    path: "nearby-places",
     loadChildren: () =>
-      import("./pages/trip-places/trip-places.module").then(
-        (m) => m.TripPlacesPageModule
+      import("./pages/nearby-places/nearby-places.module").then(
+        (m) => m.NearbyPlacesPageModule
       ),
   },
   {
@@ -60,8 +60,11 @@ const routes: Routes = [
       ),
   },
   {
-    path: 'recent-places',
-    loadChildren: () => import('./pages/recent-places/recent-places.module').then( m => m.RecentPlacesPageModule)
+    path: "recent-places",
+    loadChildren: () =>
+      import("./pages/recent-places/recent-places.module").then(
+        (m) => m.RecentPlacesPageModule
+      ),
   },
 ];
 
