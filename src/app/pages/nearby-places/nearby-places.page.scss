@@ -1,6 +1,14 @@
 ion-header {
-  ion-toolbar ion-title .align-right {
-    font-size: 2rem;
+  ion-toolbar {
+    padding: 5px;
+    --background: var(--primary-color);
+
+    ion-title,
+    ion-icon {
+      --color: var(--text-white-color);
+      font-size: 1.4rem;
+      font-weight: 600;
+    }
   }
 
   .wrapper-image {
@@ -32,19 +40,19 @@ ion-header {
 }
 
 ion-list {
-  padding: 10px 17px;
+  padding: 17px;
   margin: 0;
 
   h1 {
     margin: 0;
     font-size: 1.15rem;
-    color: var(--text-light-color);
+    color: var(--secondary-color);
     margin-bottom: 20px;
 
     span {
       display: flex;
       align-items: center;
-      color: var(--secondary-color);
+      color: var(--text-red-color);
       font-size: 1.1rem;
       font-weight: 500;
 
@@ -57,11 +65,11 @@ ion-list {
 
   ion-item {
     padding: 0;
-    background: none;
+    --background: none;
     padding-bottom: 13px;
 
     .trip-place {
-      background: var(--text-white-color);
+      --background: var(--text-white-color);
       overflow: hidden;
       border-radius: 5px;
 
@@ -98,7 +106,7 @@ ion-list {
       .description {
         h2 {
           margin: 0;
-          color: var(--text-light-color);
+          color: var(--text-dark-color);
           font-size: 1.25rem;
           font-weight: 700;
           padding-bottom: 7px;
@@ -108,7 +116,7 @@ ion-list {
         }
 
         p {
-          color: var(--text-light-color);
+          color: var(--text-dark-color);
           font-size: 1rem;
           overflow: hidden;
           display: -webkit-box;
@@ -124,7 +132,24 @@ ion-list {
         font-size: 1.2rem;
 
         &.zmdi-menu {
-          color: var(--text-light-color);
+          color: var(--text-dark-color);
+        }
+      }
+    }
+
+    ion-icon {
+      &[stop-place] {
+        background: var(--background-color);
+        margin: 0;
+        font-size: 1.5rem;
+        min-width: 33px;
+        color: var(--text-red-color);
+        position: relative;
+        z-index: 9999;
+        line-height: 28px;
+
+        &.zmdi-gps-dot {
+          color: var(--primary-color);
         }
       }
     }

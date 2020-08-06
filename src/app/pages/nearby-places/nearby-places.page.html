@@ -2,11 +2,10 @@
   <ion-toolbar>
     
     <ion-buttons slot="start">
-       <ion-back-button text="" defaultHref="logout" name="arrow-back-outline"></ion-back-button>
+       <ion-back-button color="light" text="" defaultHref="logout" name="arrow-back-outline"></ion-back-button>
     </ion-buttons>
     <ion-title>
       Places To Visit
-      <ion-icon class="zmdi zmdi-edit align-right"></ion-icon>
     </ion-title>
 
   </ion-toolbar>
@@ -44,6 +43,51 @@
         <ion-icon class="zmdi zmdi-edit ion-text-center"></ion-icon>
       </div>
       <ion-icon class="zmdi zmdi-gps-dot ion-text-end"></ion-icon>
+    </ion-item>
+
+    <ion-item>
+      <div class="trip-place d-flex">
+        <div class="picture-box image-sizing">
+          <img [src]="showLocalPlaces[0].imageURI" class="center-image">
+          <span>1</span>
+        </div>
+        <div class="description">
+          <h2>{{ showLocalPlaces[0].name }}</h2>
+          <p>{{ showLocalPlaces[0].location }}</p>
+        </div>
+        <ion-icon class="zmdi zmdi-menu align-right"></ion-icon>
+      </div>
+      <ion-icon class="zmdi zmdi-minus-circle-outline" stop-place></ion-icon>
+    </ion-item>
+
+    <ion-item>
+      <div class="trip-place d-flex">
+        <div class="picture-box image-sizing">
+          <img [src]="showLocalPlaces[1].imageURI" class="center-image">
+          <span>2</span>
+        </div>
+        <div class="description">
+          <h2>{{ showLocalPlaces[1].name }}</h2>
+          <p>{{ showLocalPlaces[1].location }}</p>
+        </div>
+        <ion-icon class="zmdi zmdi-menu align-right"></ion-icon>
+      </div>
+      <ion-icon class="zmdi zmdi-minus-circle-outline" stop-place></ion-icon>
+    </ion-item>
+
+    <ion-item>
+      <div class="trip-place d-flex">
+        <div class="picture-box image-sizing">
+          <img [src]="showLocalPlaces[2].imageURI" class="center-image">
+          <span>3</span>
+        </div>
+        <div class="description">
+          <h2>{{ showLocalPlaces[2].name }}</h2>
+          <p>{{ showLocalPlaces[2].location }}</p>
+        </div>
+        <ion-icon class="zmdi zmdi-menu align-right"></ion-icon>
+      </div>
+      <ion-icon class="zmdi zmdi-minus-circle-outline" stop-place></ion-icon>
     </ion-item>
 
   </ion-list>
