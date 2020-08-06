@@ -1,0 +1,7 @@
+{
+  "name": "ionic-angular-trip-planner",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
