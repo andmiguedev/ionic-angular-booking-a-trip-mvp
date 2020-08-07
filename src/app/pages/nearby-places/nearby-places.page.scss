@@ -40,20 +40,22 @@ ion-header {
 }
 
 ion-list {
-  padding: 17px;
-  margin: 0;
+  padding: 0;
+  background: var(--background-color);
 
   h1 {
-    margin: 0;
-    font-size: 1.15rem;
-    color: var(--secondary-color);
-    margin-bottom: 20px;
+    margin-top: 10px;
+    padding: 0px 20px;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--text-dark-color);
+    padding-bottom: 20px;
 
     span {
-      display: flex;
+      display: flex !important;
       align-items: center;
       color: var(--text-red-color);
-      font-size: 1.1rem;
+      font-size: 1.15rem;
       font-weight: 500;
 
       ion-icon {
@@ -65,11 +67,16 @@ ion-list {
 
   ion-item {
     padding: 0;
-    --background: none;
-    padding-bottom: 13px;
+    margin-left: 18px;
+    margin-bottom: 10px;
+    width: 378px;
+    height: auto;
+    border-radius: 7px;
+    border: 1px solid var(--text-light-color);
+    // background: var(--text-light-color);
 
     .trip-place {
-      --background: var(--text-white-color);
+      background: var(--text-white-color);
       overflow: hidden;
       border-radius: 5px;
 
@@ -105,7 +112,7 @@ ion-list {
 
       .description {
         h2 {
-          margin: 0;
+          margin-top: 12px;
           color: var(--text-dark-color);
           font-size: 1.25rem;
           font-weight: 700;
@@ -127,30 +134,20 @@ ion-list {
       }
 
       ion-icon {
-        color: var(--primary-color);
         min-width: 50px;
-        font-size: 1.2rem;
+        font-size: 1.5rem;
+        color: var(--text-light-color);
 
-        &.zmdi-menu {
-          color: var(--text-dark-color);
+        &.zmdi-edit {
+          padding-left: 60px;
+          color: var(--primary-color);
         }
       }
     }
 
     ion-icon {
-      &[stop-place] {
-        background: var(--background-color);
-        margin: 0;
-        font-size: 1.5rem;
-        min-width: 33px;
-        color: var(--text-red-color);
-        position: relative;
-        z-index: 9999;
-        line-height: 28px;
-
-        &.zmdi-gps-dot {
-          color: var(--primary-color);
-        }
+      &[item-end] {
+        padding-left: 115px;
       }
     }
   }
