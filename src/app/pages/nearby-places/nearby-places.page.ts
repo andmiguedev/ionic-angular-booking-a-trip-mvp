@@ -1,5 +1,5 @@
-import { TripPlace } from "../../models/trip-places.model";
-import { LocalPlacesService } from "../../services/local-places.service";
+import { StopPlace } from "../../models/stop-place.model";
+import { RenderLocalInfoService } from "../../services/render-local-info.service";
 import { Component, OnInit } from "@angular/core";
 
 @Component({
@@ -8,14 +8,11 @@ import { Component, OnInit } from "@angular/core";
   styleUrls: ["./nearby-places.page.scss"],
 })
 export class NearbyPlacesPage implements OnInit {
-  showLocalPlaces: TripPlace[];
+  showLocalPlaces: StopPlace[];
 
-  constructor(private displayLocalPlaces: LocalPlacesService) {}
+  constructor(private displayLocalPlaces: RenderLocalInfoService) {}
 
-  /**
-   * This outputs local trip places from the provided service
-   */
   ngOnInit() {
-    this.showLocalPlaces = this.displayLocalPlaces.mostVisitedPlaces;
+    this.showLocalPlaces = this.displayLocalPlaces.nearbyPlaces;
   }
 }
