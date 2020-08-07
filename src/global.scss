@@ -28,7 +28,7 @@
 /* Color variables that are used through the pages */
 :root {
   --primary-color: #0fc874;
-  --secondary-color: #32db64;
+  --secondary-color: #09b83e;
   --background-color: #f9f6fa;
   --text-light-color: #b3b3b3;
   --text-dark-color: #838383;
@@ -69,6 +69,168 @@
       left: -50% !important;
       right: -50% !important;
       margin: auto;
+    }
+  }
+}
+
+.customer-form {
+  display: block;
+  width: calc(100% - 75px);
+  margin: 0 auto;
+
+  ion-list {
+    margin: 0;
+    padding: 18px 0px 0 0px;
+    margin-bottom: 20px;
+
+    ion-item {
+      padding: 0px;
+      min-height: unset;
+      border-radius: 0px;
+      box-shadow: none !important;
+      margin: 10px 0;
+    }
+
+    h3 {
+      margin: 0 !important;
+      font-weight: 500;
+      font-size: 1.5rem;
+      position: relative;
+      margin-top: 20px !important;
+    }
+  }
+}
+
+ion-list {
+  margin: 0;
+  padding-top: 14px;
+
+  ion-item {
+    background: none;
+    padding: 14px 37px;
+    min-height: unset;
+    align-items: flex-start;
+
+    ion-icon {
+      color: var(--primary-color);
+      font-size: 2rem;
+      min-width: 50px;
+      position: relative;
+      //top: 2px;
+      margin: 0;
+
+      ion-label {
+        margin: 0;
+
+        h2 {
+          color: var(--text-light-color);
+          font-size: 1.6rem;
+          font-weight: 400;
+          margin: 0;
+        }
+      }
+    }
+  }
+}
+
+ion-footer {
+  padding: 14px 37px;
+
+  h2 {
+    color: var(--text-light-color);
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin: 0;
+  }
+
+  .icon-box {
+    display: flex;
+    align-items: center;
+    min-width: 128px;
+
+    img {
+      display: block;
+      width: 35px;
+      margin: 0 auto;
+    }
+  }
+}
+
+ion-app[dir="rtl"] {
+  ion-header {
+    ion-toolbar {
+      ion-title {
+        .align-right {
+          margin-left: 0 !important;
+          margin-right: auto !important;
+        }
+      }
+
+      .btn-bar {
+        padding-left: 0px;
+        padding-right: 18px;
+      }
+    }
+  }
+
+  [text-end] {
+    text-align: left !important;
+  }
+
+  [text-start] {
+    text-align: right !important;
+  }
+
+  .d-flex {
+    .align-right {
+      margin-left: 0;
+      margin-right: auto;
+    }
+  }
+
+  .customer-form {
+    ion-label {
+      transform-origin: right top !important;
+      margin-right: 0;
+    }
+
+    ion-item,
+    ion-textarea {
+      text-align: right;
+    }
+    ion-item,
+    ion-input {
+      text-align: right;
+    }
+
+    ion-item .icon-box {
+      margin-right: 0px !important;
+      margin-left: 16px !important;
+    }
+  }
+
+  app-user-trips {
+    .container .recent ion-item .picture-box[item-start] {
+      margin-right: 0 !important;
+      margin-left: 14px !important;
+    }
+  }
+
+  app-nearby-places {
+    ion-list,
+    ion-item {
+      &::before,
+      &::after {
+        right: unset;
+        left: 8.5px;
+      }
+    }
+  }
+
+  app-nearby-places {
+    ion-list ion-item .trip-place .picture-box {
+      margin-right: 0px;
+      margin-left: 15px;
     }
   }
 }
