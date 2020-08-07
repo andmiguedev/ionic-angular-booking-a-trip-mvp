@@ -1,0 +1,157 @@
+ion-header,
+ion-toolbar,
+ion-buttons {
+  --background: var(--primary-color);
+  --color: var(--text-white-color);
+}
+
+ion-toolbar {
+  height: 50px;
+
+  ion-buttons {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 10%;
+  }
+
+  ion-title {
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    font-weight: 700;
+  }
+}
+
+ion-content {
+  h1 {
+    position: relative;
+    text-align: center;
+    color: var(--text-black-color);
+    font-size: 1.2rem;
+    padding-bottom: 20px;
+    line-height: 1;
+    margin: 0;
+    margin-top: 40px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      width: 80px;
+      height: 3.5px;
+      background: var(--primary-color);
+      margin: auto;
+      border-radius: 50px;
+    }
+  }
+
+  .customer-form {
+    ion-list {
+      margin: 0;
+      padding: 18px 0px 0 0px;
+      margin-top: 54px;
+      // background: var(--text-dark-color);
+
+      ion-item {
+        border: none;
+        box-shadow: none;
+        margin-left: 0;
+        padding: 0;
+
+        ion-icon {
+          font-size: 1.3rem;
+          min-width: 28px;
+        }
+
+        ion-input,
+        ion-textarea {
+          font-size: 1.1rem;
+          font-weight: 400;
+          margin-top: 0px;
+          margin-bottom: 12px;
+          border-bottom: 1px solid var(--text-dark-color) !important;
+          text-transform: none;
+          min-width: 350px;
+          letter-spacing: 0.5px;
+
+          ::-webkit-input-placeholder {
+            color: var(--text-dark-color);
+            font-weight: 400;
+            letter-spacing: 0.3px;
+          }
+
+          ::-moz-placeholder {
+            color: var(--text-dark-color);
+            font-weight: 400;
+            letter-spacing: 0.3px;
+          }
+
+          :-ms-input-placeholder {
+            color: var(--text-dark-color);
+            font-weight: 400;
+            letter-spacing: 0.3px;
+          }
+
+          :-moz-placeholder {
+            color: var(--text-dark-color);
+            font-weight: 400;
+            letter-spacing: 0.3px;
+          }
+        }
+      }
+
+      ion-textarea {
+        width: 308px;
+        height: auto;
+      }
+
+      ion-row {
+        margin-top: -70px;
+
+        ion-col {
+          ion-item {
+            padding: 0;
+            display: inline-block;
+            border: none !important;
+            width: fit-content;
+            margin: 0 auto;
+            margin-left: 3px;
+
+            ion-radio {
+              &[item-start] {
+                margin: 0;
+                margin-right: 11px;
+              }
+            }
+
+            ion-label {
+              margin: 0;
+            }
+          }
+        }
+      }
+    }
+
+    ion-buttons {
+      display: block;
+      width: calc(100% - 75px);
+      margin: 60px 20%;
+
+      ion-button {
+        &.btn-normal {
+          font-size: 1.2rem;
+          font-weight: 500;
+          height: 45px;
+          width: 185px;
+          border-radius: 15px;
+          background: var(--primary-color) !important;
+          color: var(--text-white-color) !important;
+          letter-spacing: 0px;
+          text-transform: none;
+        }
+      }
+    }
+  }
+}

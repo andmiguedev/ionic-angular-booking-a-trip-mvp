@@ -32,9 +32,24 @@ ion-content {
     }
   }
 
-  .wrapper-button {
-    margin: 0 auto;
+  ion-buttons {
     display: block;
-    width: calc(100% - 150px);
+    width: calc(100% - 75px);
+    margin: 60px 20%;
+
+    ion-button {
+      &.btn-normal {
+        font-size: 1.2rem;
+        font-weight: 500;
+        height: 45px;
+        width: 185px;
+        margin-left: 15px;
+        border-radius: 15px;
+        background: var(--text-white-color) !important;
+        color: var(--primary-color) !important;
+        letter-spacing: 0px;
+        text-transform: none;
+      }
+    }
   }
 }
