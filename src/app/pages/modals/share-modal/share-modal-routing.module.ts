@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { CreateTripPage } from './create-trip.page';
+import { ShareModalPage } from './share-modal.page';
 
 const routes: Routes = [
   {
     path: '',
-    component: CreateTripPage
+    component: ShareModalPage
   }
 ];
 
@@ -14,4 +14,4 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],
 })
-export class CreateTripPageRoutingModule {}
+export class ShareModalPageRoutingModule {}

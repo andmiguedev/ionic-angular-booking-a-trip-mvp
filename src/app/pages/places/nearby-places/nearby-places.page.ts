@@ -1,5 +1,5 @@
-import { StopPlace } from "../../models/stop-place.model";
-import { RenderLocalInfoService } from "../../services/render-local-info.service";
+import { StopPlace } from "../../../models/stop-place.model";
+import { RenderLocalInfoService } from "../../../services/render-local-info.service";
 import { Component, OnInit } from "@angular/core";
 
 @Component({

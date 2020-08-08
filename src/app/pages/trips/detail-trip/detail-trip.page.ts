@@ -1,6 +1,6 @@
 import { Component, OnInit } from "@angular/core";
-import { RenderLocalInfoService } from "src/app/services/render-local-info.service";
-import { VisitorPlace } from "src/app/models/visitor-place.model";
+import { RenderLocalInfoService } from "../../../services/render-local-info.service";
+import { VisitorPlace } from "../../../models/visitor-place.model";
 
 @Component({
   selector: "app-detail-trip",

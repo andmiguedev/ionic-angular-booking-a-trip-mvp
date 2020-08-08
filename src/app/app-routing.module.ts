@@ -9,7 +9,7 @@ const routes: Routes = [
   },
   {
     path: "",
-    redirectTo: "welcome",
+    redirectTo: "share-modal",
     pathMatch: "full",
   },
   {
@@ -20,49 +20,49 @@ const routes: Routes = [
   {
     path: "select-place",
     loadChildren: () =>
-      import("./pages/select-place/select-place.module").then(
+      import("./pages/places/select-place/select-place.module").then(
         (m) => m.SelectPlacePageModule
       ),
   },
   {
     path: "offer-places",
     loadChildren: () =>
-      import("./pages/offer-places/offer-places.module").then(
+      import("./pages/places/offer-places/offer-places.module").then(
         (m) => m.OfferPlacesPageModule
       ),
   },
   {
     path: "nearby-places",
     loadChildren: () =>
-      import("./pages/nearby-places/nearby-places.module").then(
+      import("./pages/places/nearby-places/nearby-places.module").then(
         (m) => m.NearbyPlacesPageModule
       ),
   },
   {
     path: "create-trip",
     loadChildren: () =>
-      import("./pages/create-trip/create-trip.module").then(
+      import("./pages/trips/create-trip/create-trip.module").then(
         (m) => m.CreateTripPageModule
       ),
   },
   {
     path: "edit-trip",
     loadChildren: () =>
-      import("./pages/edit-trip/edit-trip.module").then(
+      import("./pages/trips/edit-trip/edit-trip.module").then(
         (m) => m.EditTripPageModule
       ),
   },
   {
     path: "detail-trip",
     loadChildren: () =>
-      import("./pages/detail-trip/detail-trip.module").then(
+      import("./pages/trips/detail-trip/detail-trip.module").then(
         (m) => m.DetailTripPageModule
       ),
   },
   {
     path: "user-trips",
     loadChildren: () =>
-      import("./pages/user-trips/user-trips.module").then(
+      import("./pages/trips/user-trips/user-trips.module").then(
         (m) => m.UserTripsPageModule
       ),
   },
@@ -70,6 +70,13 @@ const routes: Routes = [
     path: "support",
     loadChildren: () =>
       import("./pages/support/support.module").then((m) => m.SupportPageModule),
+  },
+  {
+    path: "share-modal",
+    loadChildren: () =>
+      import("./pages/modals/share-modal/share-modal.module").then(
+        (m) => m.ShareModalPageModule
+      ),
   },
 ];
 

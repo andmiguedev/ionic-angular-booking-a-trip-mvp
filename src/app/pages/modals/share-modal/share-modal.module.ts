@@ -4,17 +4,17 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { OfferPlacesPageRoutingModule } from './offer-places-routing.module';
+import { ShareModalPageRoutingModule } from './share-modal-routing.module';
 
-import { OfferPlacesPage } from './offer-places.page';
+import { ShareModalPage } from './share-modal.page';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    OfferPlacesPageRoutingModule
+    ShareModalPageRoutingModule
   ],
-  declarations: [OfferPlacesPage]
+  declarations: [ShareModalPage]
 })
-export class OfferPlacesPageModule {}
+export class ShareModalPageModule {}
