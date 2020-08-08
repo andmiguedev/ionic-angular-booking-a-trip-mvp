@@ -50,12 +50,12 @@ export class RenderLocalInfoService {
     ),
   ];
 
-  get nearbyPlaces() {
-    return [...this._stopByPlaces];
-  }
-
   get touristicPlaces() {
     return [...this._touristicPlaces];
+  }
+
+  get nearbyPlaces() {
+    return [...this._stopByPlaces];
   }
 
   constructor() {}

@@ -9,7 +9,7 @@ const routes: Routes = [
   },
   {
     path: "",
-    redirectTo: "share-modal",
+    redirectTo: "recent-places",
     pathMatch: "full",
   },
   {
@@ -76,6 +76,13 @@ const routes: Routes = [
     loadChildren: () =>
       import("./pages/modals/share-modal/share-modal.module").then(
         (m) => m.ShareModalPageModule
+      ),
+  },
+  {
+    path: "recent-places",
+    loadChildren: () =>
+      import("./pages/places/recent-places/recent-places.module").then(
+        (m) => m.RecentPlacesPageModule
       ),
   },
 ];
