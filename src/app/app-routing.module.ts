@@ -9,7 +9,7 @@ const routes: Routes = [
   },
   {
     path: "",
-    redirectTo: "support",
+    redirectTo: "welcome",
     pathMatch: "full",
   },
   {
