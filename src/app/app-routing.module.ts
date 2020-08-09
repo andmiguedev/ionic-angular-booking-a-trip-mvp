@@ -9,7 +9,7 @@ const routes: Routes = [
   },
   {
     path: "",
-    redirectTo: "success-modal",
+    redirectTo: "save-modal",
     pathMatch: "full",
   },
   {
@@ -90,6 +90,13 @@ const routes: Routes = [
     loadChildren: () =>
       import("./pages/modals/success-modal/success-modal.module").then(
         (m) => m.SuccessModalPageModule
+      ),
+  },
+  {
+    path: "save-modal",
+    loadChildren: () =>
+      import("./pages/modals/save-modal/save-modal.module").then(
+        (m) => m.SaveModalPageModule
       ),
   },
 ];
