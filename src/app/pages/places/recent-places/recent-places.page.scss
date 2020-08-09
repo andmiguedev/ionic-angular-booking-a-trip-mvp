@@ -76,7 +76,7 @@ ion-content {
     width: 100vw;
 
     ion-list {
-      padding-top: 5px;
+      --padding-top: 5px;
 
       ion-item {
         padding: 0;
@@ -92,7 +92,6 @@ ion-content {
           align-items: flex-start;
           margin: 0;
           height: 130px;
-          // height: 300px !important;
 
           .picture-box {
             width: 75%;

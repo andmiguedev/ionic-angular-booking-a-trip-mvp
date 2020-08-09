@@ -9,7 +9,7 @@ const routes: Routes = [
   },
   {
     path: "",
-    redirectTo: "recent-places",
+    redirectTo: "success-modal",
     pathMatch: "full",
   },
   {
@@ -83,6 +83,13 @@ const routes: Routes = [
     loadChildren: () =>
       import("./pages/places/recent-places/recent-places.module").then(
         (m) => m.RecentPlacesPageModule
+      ),
+  },
+  {
+    path: "success-modal",
+    loadChildren: () =>
+      import("./pages/modals/success-modal/success-modal.module").then(
+        (m) => m.SuccessModalPageModule
       ),
   },
 ];
