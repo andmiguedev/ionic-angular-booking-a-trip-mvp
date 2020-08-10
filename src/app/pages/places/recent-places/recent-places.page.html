@@ -1,0 +1,140 @@
+<ion-header>
+  <ion-toolbar>
+    
+    <ion-buttons slot="start">
+       <ion-back-button color="light" text="" defaultHref="welcome" name="arrow-back-outline"></ion-back-button>
+    </ion-buttons>
+    <ion-title>
+      Recent Places
+    </ion-title>
+
+  </ion-toolbar>
+
+  <div class="wrapper-image">
+    <div class="map-box">
+      <img src="assets/images/map/rome-map.jpg">
+      <ion-icon class="zmdi zmdi-pin active" style="top: 33%; left: 71%;"></ion-icon>
+      <ion-icon class="zmdi zmdi-pin active" style="top: 72%; left: 48%;"></ion-icon>
+      <ion-icon class="zmdi zmdi-pin active" style="top: 80%; left: 80%;"></ion-icon>
+      <ion-icon class="zmdi zmdi-pin active" style="top: 75%; left: 31%;"></ion-icon>
+			<ion-icon class="zmdi zmdi-pin active" style="top: 16%; left: 17%;"></ion-icon>
+			<ion-icon class="zmdi zmdi-pin active" style="top: 33%; left: 11%;"></ion-icon>
+			<ion-icon class="zmdi zmdi-pin active" style="top: 22%; left: 39%;"></ion-icon>
+			<ion-icon class="zmdi zmdi-pin active" style="top: 80%; left: 80%;"></ion-icon>
+    </div>
+    <ion-segment>
+      <ion-segment-button value="heritage">
+        heritage
+      </ion-segment-button>
+      <ion-segment-button value="museums">
+        museums
+      </ion-segment-button>
+      <ion-segment-button value="parks">
+        parks
+      </ion-segment-button>
+    </ion-segment>
+  </div>
+</ion-header>
+
+<ion-content class="bg-color">
+  <div class="container">
+    <ion-list lines="none">
+      <ion-item>
+        <div class="recent-place d-flex">
+          <div class="picture-box image-sizing">
+            <img [src]="showHistoricPlaces[0].imageURI">
+          </div>
+          <div class="content">
+            <h2 class="d-flex">
+              <span>{{ showHistoricPlaces[0].name }}</span>
+              <ion-icon class="zmdi zmdi-chevron-down align-right"></ion-icon>
+            </h2>
+            <p>{{ showHistoricPlaces[0].tagline }}</p>
+            <div class="d-flex rating">
+              <h3 class="d-flex">
+                <strong class="ion-text-start">{{ showHistoricPlaces[0].rating }}</strong>
+                  <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                  <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                  <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                  <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                  <span class="ion-text-end">({{ showHistoricPlaces[0].views }}k)</span>
+              </h3>
+            </div>
+          </div>
+        </div>
+      </ion-item>
+      <ion-item>
+        <div class="recent-place d-flex">
+          <div class="picture-box image-sizing">
+            <img [src]="showHistoricPlaces[1].imageURI">
+          </div>
+          <div class="content">
+            <h2 class="d-flex">
+              <span>{{ showHistoricPlaces[1].name }}</span>
+              <ion-icon class="zmdi zmdi-chevron-down align-right"></ion-icon>
+            </h2>
+            <p>{{ showHistoricPlaces[1].tagline }}</p>
+            <div class="d-flex rating">
+              <h3 class="d-flex">
+                <strong class="ion-text-start">{{ showHistoricPlaces[1].rating }}</strong>
+                <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                <span class="ion-text-end">({{ showHistoricPlaces[1].views }}k)</span>
+              </h3>
+            </div>
+          </div>
+        </div>
+      </ion-item>
+      <ion-item>
+        <div class="recent-place d-flex">
+          <div class="picture-box image-sizing">
+            <img [src]="showHistoricPlaces[2].imageURI">
+          </div>
+          <div class="content">
+            <h2 class="d-flex">
+              <span>{{ showHistoricPlaces[2].name }}</span>
+              <ion-icon class="zmdi zmdi-chevron-down align-right"></ion-icon>
+            </h2>
+            <p>{{ showHistoricPlaces[2].tagline }}</p>
+            <div class="d-flex rating">
+              <h3 class="d-flex">
+                <strong class="ion-text-start">{{ showHistoricPlaces[2].rating }}</strong>
+                  <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                  <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                  <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                  <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                  <span class="ion-text-end">({{ showHistoricPlaces[2].views }}k)</span>
+              </h3>
+            </div>
+          </div>
+        </div>
+      </ion-item>
+      <ion-item>
+        <div class="recent-place d-flex">
+          <div class="picture-box image-sizing">
+            <img [src]="showHistoricPlaces[3].imageURI">
+          </div>
+          <div class="content">
+            <h2 class="d-flex">
+              <span>{{ showHistoricPlaces[3].name }}</span>
+              <ion-icon class="zmdi zmdi-chevron-down align-right"></ion-icon>
+            </h2>
+            <p>{{ showHistoricPlaces[3].tagline }}</p>
+            <div class="d-flex rating">
+              <h3 class="d-flex">
+                <strong class="ion-text-start">{{ showHistoricPlaces[3].rating }}</strong>
+                  <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                  <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                  <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                  <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                  <span class="ion-text-end">({{ showHistoricPlaces[3].views }}k)</span>
+              </h3>
+            </div>
+          </div>
+        </div>
+      </ion-item>
+    </ion-list>
+  </div>
+</ion-content>
