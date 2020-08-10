@@ -21,8 +21,12 @@
          <div class="customer-form">
             <ion-list lines="none">
                <ion-item>
-                  <ion-icon class="zmdi zmdi-search" item-start></ion-icon>
-                  <ion-input type="text" placeholder="Search a place to visit"></ion-input>
+                  <ion-buttons>
+                     <ion-button [routerLink]="['/', 'pages', 'tabs', 'places', 'recent']">
+                        <ion-icon class="zmdi zmdi-search" item-start></ion-icon>
+                     </ion-button>
+                  </ion-buttons>
+                   <ion-input type="text" placeholder="Search for a place to visit"></ion-input>
                </ion-item>
             </ion-list>
          </div>

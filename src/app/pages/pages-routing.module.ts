@@ -16,9 +16,9 @@ const routes: Routes = [
             loadChildren: "./places/places.module#PlacesPageModule",
           },
           {
-            path: ":pageId",
+            path: "recent",
             loadChildren:
-              "./places/recent-places.module#RecentPlacesPageModule",
+              "./places/recent-places/recent-places.module#RecentPlacesPageModule",
           },
         ],
       },
