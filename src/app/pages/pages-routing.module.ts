@@ -7,7 +7,6 @@ const routes: Routes = [
   {
     path: "tabs",
     component: PagesPage,
-
     children: [
       {
         path: "places",
