@@ -12,6 +12,13 @@ const routes: Routes = [
     loadChildren: "./pages/pages.module#PagesPageModule",
   },
   {
+    path: "select-place",
+    loadChildren: () =>
+      import("./pages/places/select-place/select-place.module").then(
+        (m) => m.SelectPlacePageModule
+      ),
+  },
+  {
     path: "welcome",
     loadChildren: () =>
       import("./pages/welcome/welcome.module").then((m) => m.WelcomePageModule),

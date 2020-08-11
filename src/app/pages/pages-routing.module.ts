@@ -20,6 +20,11 @@ const routes: Routes = [
             loadChildren:
               "./places/recent-places/recent-places.module#RecentPlacesPageModule",
           },
+          {
+            path: "local",
+            loadChildren:
+              "./places/nearby-places/nearby-places.module#NearbyPlacesPageModule",
+          },
         ],
       },
       {
