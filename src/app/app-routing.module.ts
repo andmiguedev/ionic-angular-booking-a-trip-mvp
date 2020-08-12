@@ -3,20 +3,13 @@ import { PreloadAllModules, RouterModule, Routes } from "@angular/router";
 
 const routes: Routes = [
   {
-    path: "",
-    redirectTo: "pages",
-    pathMatch: "full",
-  },
-  {
     path: "pages",
     loadChildren: "./pages/pages.module#PagesPageModule",
   },
   {
-    path: "select-place",
-    loadChildren: () =>
-      import("./pages/places/select-place/select-place.module").then(
-        (m) => m.SelectPlacePageModule
-      ),
+    path: "",
+    redirectTo: "pages",
+    pathMatch: "full",
   },
   {
     path: "welcome",

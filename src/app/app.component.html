@@ -1,3 +1,57 @@
 <ion-app>
-  <ion-router-outlet></ion-router-outlet>
+  <ion-split-pane contentId="main-content">
+    <ion-menu side="start" contentId="main-content" menuId="sidebar">    
+      <ion-header>
+        <ion-toolbar>
+          <ion-buttons slot="start">
+            <ion-title>
+              <ion-icon class="zmdi zmdi-square-right align-right"></ion-icon>
+            </ion-title>
+          </ion-buttons>
+        </ion-toolbar>
+
+        <div class="profile-user">
+          <div class="circle-image image-sizing">
+            <img src="assets/images/avatar/user-profile.png" class="center-image">
+          </div>
+          <div class="greeting-user d-flex">
+            <h2>Welcome, <br> New Customer</h2>
+            <ion-icon class="zmdi zmdi-chevron-right end"></ion-icon>
+          </div>
+        </div>
+      </ion-header>
+
+      <ion-content>
+        <ion-list lines="none">
+          <ion-menu-toggle autoHide="false">
+          <ion-item>
+            <ion-icon class="zmdi zmdi-account-circle" item-start></ion-icon>
+            <h2>My Profile</h2>
+          </ion-item>
+          <ion-item>
+            <ion-icon class="zmdi zmdi-compass"></ion-icon>
+            <h2>My Places</h2> 
+          </ion-item>
+          <ion-item>
+            <ion-icon class="zmdi zmdi-airplane"></ion-icon>
+            <h2>My Trips</h2>
+          </ion-item>
+          <ion-item>
+            <ion-icon class="zmdi zmdi-thumb-up"></ion-icon>
+            <h2>Rate Us</h2>
+          </ion-item>	
+          <ion-item>
+            <ion-icon class="zmdi zmdi-card-membership"></ion-icon>
+            <h2>About Us</h2>
+          </ion-item>	
+          <ion-item>
+            <ion-icon class="zmdi zmdi-account-box-mail"></ion-icon>
+            <h2>Support</h2>
+          </ion-item>
+          </ion-menu-toggle>
+        </ion-list>
+      </ion-content>
+    </ion-menu>
+    <ion-router-outlet id="main-content"></ion-router-outlet>
+  </ion-split-pane>
 </ion-app>
