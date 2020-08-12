@@ -19,7 +19,8 @@
     </div>
     <div class="profile-name">
       <h2 class="ion-text-center">
-        New Customer
+        {{ showVisitorProfile[0].firstName }}
+        {{ showVisitorProfile[0].lastName }}
       </h2>
     </div>
   </div>
@@ -28,12 +29,13 @@
       <ion-item>
         <ion-icon class="zmdi zmdi-email"></ion-icon>
         <h2>Email Address</h2>
-				<h3>user-profile@gmail.com</h3>
+				<h3>{{ showVisitorProfile[0].emailAddress }}</h3>
       </ion-item>
       <ion-item>
 				<ion-icon class="zmdi zmdi-cake"></ion-icon>
 				<h2>Day of birth</h2>
-				<h3>August, 12<sup>th</sup> 1990</h3>
+        <h3>{{ showVisitorProfile[0].dayOfBirth }}</h3>
+				<!--<h3>August, 12<sup>th</sup> 1990</h3>-->
 			</ion-item>
 
       <ion-grid>
@@ -42,14 +44,14 @@
             <ion-item>
               <ion-icon class="zmdi zmdi-accounts"></ion-icon>
 						  <h2>Gender</h2>
-						  <h3>Male or Female</h3>
+						  <h3>{{ showVisitorProfile[0].gender }}</h3>
             </ion-item>
           </ion-col>
           <ion-col size="6">
             <ion-item>
               <ion-icon class="zmdi zmdi-globe"></ion-icon>
 						  <h2>Country</h2>
-						  <h3>USA</h3>
+						  <h3>{{ showVisitorProfile[0].country }}</h3>
             </ion-item>
           </ion-col>
         </ion-row>
@@ -63,14 +65,14 @@
             <ion-item>
               <ion-icon class="zmdi zmdi-compass"></ion-icon>
               <h2>No Trips</h2>
-              <h3>6</h3>
+              <h3>{{ showVisitorProfile[0].plannedTrips }}</h3>
             </ion-item>
           </ion-col>
           <ion-col size="6">
 					  <ion-item>
 						  <ion-icon class="zmdi zmdi-pin"></ion-icon>
 						  <h2>Places</h2>
-						  <h3>24</h3>
+						  <h3>{{ showVisitorProfile[0].visitedPlaces }}</h3>
 					  </ion-item>
           </ion-col>
         </ion-row>
