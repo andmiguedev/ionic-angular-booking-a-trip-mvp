@@ -1,6 +1,6 @@
 <ion-app>
   <ion-split-pane contentId="main-content">
-    <ion-menu side="start" contentId="main-content" menuId="sidebar">    
+    <ion-menu contentId="main-content" menuId="sidebar" side="start">    
       <ion-header>
         <ion-toolbar>
           <ion-buttons slot="start">
@@ -12,7 +12,7 @@
 
         <div class="profile-user">
           <div class="circle-image image-sizing">
-            <img src="assets/images/avatar/user-profile.png" class="center-image">
+            <img src="assets/images/avatar/user-profile1.jpg" class="center-image">
           </div>
           <div class="greeting-user d-flex">
             <h2>Welcome, <br> New Customer</h2>
@@ -23,32 +23,50 @@
 
       <ion-content>
         <ion-list lines="none">
-          <ion-menu-toggle autoHide="false">
-          <ion-item>
-            <ion-icon class="zmdi zmdi-account-circle" item-start></ion-icon>
-            <h2>My Profile</h2>
-          </ion-item>
-          <ion-item>
-            <ion-icon class="zmdi zmdi-compass"></ion-icon>
-            <h2>My Places</h2> 
-          </ion-item>
-          <ion-item>
-            <ion-icon class="zmdi zmdi-airplane"></ion-icon>
-            <h2>My Trips</h2>
-          </ion-item>
-          <ion-item>
-            <ion-icon class="zmdi zmdi-thumb-up"></ion-icon>
-            <h2>Rate Us</h2>
-          </ion-item>	
-          <ion-item>
-            <ion-icon class="zmdi zmdi-card-membership"></ion-icon>
-            <h2>About Us</h2>
-          </ion-item>	
-          <ion-item>
-            <ion-icon class="zmdi zmdi-account-box-mail"></ion-icon>
-            <h2>Support</h2>
-          </ion-item>
+          
+          <ion-menu-toggle>
+            <ion-item>
+              <ion-button [routerLink]="['/', 'user-profile']">
+                <ion-icon class="zmdi zmdi-account-circle" item-start></ion-icon>
+                <h2>My Profile</h2>
+              </ion-button>
+            </ion-item>
           </ion-menu-toggle>
+          <ion-menu-toggle>
+            <ion-item>
+              <ion-button [routerLink]="['/', 'pages', 'tabs', 'places', 'recent']">
+                <ion-icon class="zmdi zmdi-compass"></ion-icon>
+                <h2>My Places</h2>
+              </ion-button> 
+            </ion-item>
+          </ion-menu-toggle>
+            <ion-item>
+              <ion-button>
+                <ion-icon class="zmdi zmdi-airplane"></ion-icon>
+                <h2>My Trips</h2>
+              </ion-button>
+            </ion-item>
+            <ion-item>
+              <ion-button>
+                <ion-icon class="zmdi zmdi-thumb-up"></ion-icon>
+                <h2>Rate Us</h2>
+              </ion-button>
+            </ion-item>	
+            <ion-item>
+              <ion-button>
+                <ion-icon class="zmdi zmdi-card-membership"></ion-icon>
+                <h2>About Us</h2>
+              </ion-button>
+            </ion-item>
+            <ion-menu-toggle>	
+              <ion-item>
+                <ion-button [routerLink]="['/', 'support']">
+                  <ion-icon class="zmdi zmdi-account-box-mail"></ion-icon>
+                  <h2>Support</h2>
+                </ion-button>
+              </ion-item>
+            </ion-menu-toggle>
+        
         </ion-list>
       </ion-content>
     </ion-menu>

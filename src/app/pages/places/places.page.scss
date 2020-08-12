@@ -1,25 +1,23 @@
-ion-toolbar {
-  --background: var(--primary-color);
-  color: var(--text-white-color);
-  position: absolute;
-  width: 100%;
-  left: 0;
-
-  ion-buttons {
-    position: absolute;
-    // width: 100%;
+ion-header {
+  ion-toolbar {
+    --background: var(--primary-color);
+    color: var(--text-white-color);
+    height: 50px;
+    position: relative;
+    width: 100%;
     left: 0;
-    // top: 10%;
-  }
 
-  ion-title {
-    font-size: 1.3rem;
-  }
+    ion-title {
+      text-transform: uppercase;
+      font-size: 1.25rem;
+    }
 
-  ion-icon {
-    margin: 11px 5px 12px;
-    font-size: 1.6rem;
-    font-weight: 600;
+    ion-icon {
+      position: absolute;
+      font-size: 1.6rem;
+      left: 90%;
+      top: 25%;
+    }
   }
 }
 
@@ -55,7 +53,7 @@ ion-content {
         z-index: 999;
         width: 400px !important;
         margin: 15px 3px !important;
-        padding: 60px 23px;
+        padding: 10px 23px;
         background: var(--full-transparent);
         overflow: hidden;
         display: block;
