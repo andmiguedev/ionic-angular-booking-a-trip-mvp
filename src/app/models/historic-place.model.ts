@@ -1,4 +1,4 @@
-export class VisitorPlace {
+export class HistoricPlace {
   constructor(
     public id: string,
     public imageURI: string,

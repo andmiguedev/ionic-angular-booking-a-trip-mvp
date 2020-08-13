@@ -1,13 +1,13 @@
-import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import { NgModule } from "@angular/core";
+import { Routes, RouterModule } from "@angular/router";
 
-import { RecentPlacesPage } from './recent-places.page';
+import { RecentPlacesPage } from "./recent-places.page";
 
 const routes: Routes = [
   {
-    path: '',
-    component: RecentPlacesPage
-  }
+    path: "",
+    component: RecentPlacesPage,
+  },
 ];
 
 @NgModule({

@@ -20,48 +20,44 @@
 			<ion-icon class="zmdi zmdi-pin active" style="top: 16%; left: 17%;"></ion-icon>
 			<ion-icon class="zmdi zmdi-pin active" style="top: 33%; left: 11%;"></ion-icon>
 			<ion-icon class="zmdi zmdi-pin active" style="top: 22%; left: 39%;"></ion-icon>
-			<ion-icon class="zmdi zmdi-pin active" style="top: 80%; left: 80%;"></ion-icon>
+			<ion-icon class="zmdi zmdi-pin active" style="top: 80%; left: 80%;"></ion-icon>    
     </div>
-    <ion-segment>
+    <ion-segment [(ngModel)]="switchTabs">
       <ion-segment-button value="historic">
-        <ion-buttons>
-          <ion-button [routerLink]="['/', 'pages', 'tabs', 'places', 'local']">
-           historic
-          </ion-button>
-        </ion-buttons>
+        historic
       </ion-segment-button>
-      <ion-segment-button value="museums">
+      <ion-segment-button value="museum">
         museums
       </ion-segment-button>
-      <ion-segment-button value="parks">
-        parks
+      <ion-segment-button value="church">
+        churches
       </ion-segment-button>
     </ion-segment>
   </div>
 </ion-header>
 
 <ion-content class="bg-color">
-  <div class="container">
-    <ion-list lines="none">
+  <div class="container" [ngSwitch]="switchTabs">
+    <ion-list lines="none" *ngSwitchCase="'historic'">
       <ion-item>
         <div class="recent-place d-flex">
           <div class="picture-box image-sizing">
-            <img [src]="showHistoricPlaces[0].imageURI">
+            <img [src]="historicPlaces[0].imageURI">
           </div>
           <div class="content">
             <h2 class="d-flex">
-              <span>{{ showHistoricPlaces[0].name }}</span>
+              <span>{{ historicPlaces[0].name }}</span>
               <ion-icon class="zmdi zmdi-chevron-down align-right"></ion-icon>
             </h2>
-            <p>{{ showHistoricPlaces[0].tagline }}</p>
+            <p>{{ historicPlaces[0].tagline }}</p>
             <div class="d-flex rating">
               <h3 class="d-flex">
-                <strong class="ion-text-start">{{ showHistoricPlaces[0].rating }}</strong>
+                <strong class="ion-text-start">{{ historicPlaces[0].rating }}</strong>
                   <ion-icon class="zmdi zmdi-star active"></ion-icon>
                   <ion-icon class="zmdi zmdi-star active"></ion-icon>
                   <ion-icon class="zmdi zmdi-star active"></ion-icon>
                   <ion-icon class="zmdi zmdi-star active"></ion-icon>
-                  <span class="ion-text-end">({{ showHistoricPlaces[0].views }}k)</span>
+                  <span class="ion-text-end">({{ historicPlaces[0].views }}k)</span>
               </h3>
             </div>
           </div>
@@ -70,22 +66,22 @@
       <ion-item>
         <div class="recent-place d-flex">
           <div class="picture-box image-sizing">
-            <img [src]="showHistoricPlaces[1].imageURI">
+            <img [src]="historicPlaces[1].imageURI">
           </div>
           <div class="content">
             <h2 class="d-flex">
-              <span>{{ showHistoricPlaces[1].name }}</span>
+              <span>{{ historicPlaces[1].name }}</span>
               <ion-icon class="zmdi zmdi-chevron-down align-right"></ion-icon>
             </h2>
-            <p>{{ showHistoricPlaces[1].tagline }}</p>
+            <p>{{ historicPlaces[1].tagline }}</p>
             <div class="d-flex rating">
               <h3 class="d-flex">
-                <strong class="ion-text-start">{{ showHistoricPlaces[1].rating }}</strong>
+                <strong class="ion-text-start">{{ historicPlaces[1].rating }}</strong>
                 <ion-icon class="zmdi zmdi-star active"></ion-icon>
                 <ion-icon class="zmdi zmdi-star active"></ion-icon>
                 <ion-icon class="zmdi zmdi-star active"></ion-icon>
                 <ion-icon class="zmdi zmdi-star active"></ion-icon>
-                <span class="ion-text-end">({{ showHistoricPlaces[1].views }}k)</span>
+                <span class="ion-text-end">({{ historicPlaces[1].views }}k)</span>
               </h3>
             </div>
           </div>
@@ -94,22 +90,22 @@
       <ion-item>
         <div class="recent-place d-flex">
           <div class="picture-box image-sizing">
-            <img [src]="showHistoricPlaces[2].imageURI">
+            <img [src]="historicPlaces[2].imageURI">
           </div>
           <div class="content">
             <h2 class="d-flex">
-              <span>{{ showHistoricPlaces[2].name }}</span>
+              <span>{{ historicPlaces[2].name }}</span>
               <ion-icon class="zmdi zmdi-chevron-down align-right"></ion-icon>
             </h2>
-            <p>{{ showHistoricPlaces[2].tagline }}</p>
+            <p>{{ historicPlaces[2].tagline }}</p>
             <div class="d-flex rating">
               <h3 class="d-flex">
-                <strong class="ion-text-start">{{ showHistoricPlaces[2].rating }}</strong>
+                <strong class="ion-text-start">{{ historicPlaces[2].rating }}</strong>
                   <ion-icon class="zmdi zmdi-star active"></ion-icon>
                   <ion-icon class="zmdi zmdi-star active"></ion-icon>
                   <ion-icon class="zmdi zmdi-star active"></ion-icon>
                   <ion-icon class="zmdi zmdi-star active"></ion-icon>
-                  <span class="ion-text-end">({{ showHistoricPlaces[2].views }}k)</span>
+                  <span class="ion-text-end">({{ historicPlaces[2].views }}k)</span>
               </h3>
             </div>
           </div>
@@ -118,22 +114,220 @@
       <ion-item>
         <div class="recent-place d-flex">
           <div class="picture-box image-sizing">
-            <img [src]="showHistoricPlaces[3].imageURI">
+            <img [src]="historicPlaces[3].imageURI">
           </div>
           <div class="content">
             <h2 class="d-flex">
-              <span>{{ showHistoricPlaces[3].name }}</span>
+              <span>{{ historicPlaces[3].name }}</span>
               <ion-icon class="zmdi zmdi-chevron-down align-right"></ion-icon>
             </h2>
-            <p>{{ showHistoricPlaces[3].tagline }}</p>
+            <p>{{ historicPlaces[3].tagline }}</p>
             <div class="d-flex rating">
               <h3 class="d-flex">
-                <strong class="ion-text-start">{{ showHistoricPlaces[3].rating }}</strong>
+                <strong class="ion-text-start">{{ historicPlaces[3].rating }}</strong>
                   <ion-icon class="zmdi zmdi-star active"></ion-icon>
                   <ion-icon class="zmdi zmdi-star active"></ion-icon>
                   <ion-icon class="zmdi zmdi-star active"></ion-icon>
                   <ion-icon class="zmdi zmdi-star active"></ion-icon>
-                  <span class="ion-text-end">({{ showHistoricPlaces[3].views }}k)</span>
+                  <span class="ion-text-end">({{ historicPlaces[3].views }}k)</span>
+              </h3>
+            </div>
+          </div>
+        </div>
+      </ion-item>
+    </ion-list>
+
+    <ion-list lines="none" *ngSwitchCase="'museum'">
+      <ion-item>
+        <div class="recent-place d-flex">
+          <div class="picture-box image-sizing">
+            <img [src]="museumPlaces[0].imageURI">
+          </div>
+          <div class="content">
+            <h2 class="d-flex">
+              <span>{{ museumPlaces[0].name }}</span>
+              <ion-icon class="zmdi zmdi-chevron-down align-right"></ion-icon>
+            </h2>
+            <p>{{ museumPlaces[0].tagline }}</p>
+            <div class="d-flex rating">
+              <h3 class="d-flex">
+                <strong class="ion-text-start">{{ museumPlaces[0].rating }}</strong>
+                  <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                  <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                  <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                  <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                  <span class="ion-text-end">({{ museumPlaces[0].views }}k)</span>
+              </h3>
+            </div>
+          </div>
+        </div>
+      </ion-item>
+      <ion-item>
+        <div class="recent-place d-flex">
+          <div class="picture-box image-sizing">
+            <img [src]="museumPlaces[1].imageURI">
+          </div>
+          <div class="content">
+            <h2 class="d-flex">
+              <span>{{ museumPlaces[1].name }}</span>
+              <ion-icon class="zmdi zmdi-chevron-down align-right"></ion-icon>
+            </h2>
+            <p>{{ museumPlaces[1].tagline }}</p>
+            <div class="d-flex rating">
+              <h3 class="d-flex">
+                <strong class="ion-text-start">{{ museumPlaces[1].rating }}</strong>
+                <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                <span class="ion-text-end">({{ museumPlaces[1].views }}k)</span>
+              </h3>
+            </div>
+          </div>
+        </div>
+      </ion-item>
+      <ion-item>
+        <div class="recent-place d-flex">
+          <div class="picture-box image-sizing">
+            <img [src]="museumPlaces[2].imageURI">
+          </div>
+          <div class="content">
+            <h2 class="d-flex">
+              <span>{{ museumPlaces[2].name }}</span>
+              <ion-icon class="zmdi zmdi-chevron-down align-right"></ion-icon>
+            </h2>
+            <p>{{ museumPlaces[2].tagline }}</p>
+            <div class="d-flex rating">
+              <h3 class="d-flex">
+                <strong class="ion-text-start">{{ museumPlaces[2].rating }}</strong>
+                  <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                  <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                  <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                  <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                  <span class="ion-text-end">({{ museumPlaces[2].views }}k)</span>
+              </h3>
+            </div>
+          </div>
+        </div>
+      </ion-item>
+      <ion-item>
+        <div class="recent-place d-flex">
+          <div class="picture-box image-sizing">
+            <img [src]="museumPlaces[3].imageURI">
+          </div>
+          <div class="content">
+            <h2 class="d-flex">
+              <span>{{ museumPlaces[3].name }}</span>
+              <ion-icon class="zmdi zmdi-chevron-down align-right"></ion-icon>
+            </h2>
+            <p>{{ museumPlaces[3].tagline }}</p>
+            <div class="d-flex rating">
+              <h3 class="d-flex">
+                <strong class="ion-text-start">{{ museumPlaces[3].rating }}</strong>
+                  <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                  <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                  <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                  <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                  <span class="ion-text-end">({{ museumPlaces[3].views }}k)</span>
+              </h3>
+            </div>
+          </div>
+        </div>
+      </ion-item>
+    </ion-list>
+
+    <ion-list lines="none" *ngSwitchCase="'church'">
+      <ion-item>
+        <div class="recent-place d-flex">
+          <div class="picture-box image-sizing">
+            <img [src]="churchPlaces[0].imageURI">
+          </div>
+          <div class="content">
+            <h2 class="d-flex">
+              <span>{{ churchPlaces[0].name }}</span>
+              <ion-icon class="zmdi zmdi-chevron-down align-right"></ion-icon>
+            </h2>
+            <p>{{ churchPlaces[0].tagline }}</p>
+            <div class="d-flex rating">
+              <h3 class="d-flex">
+                <strong class="ion-text-start">{{ churchPlaces[0].rating }}</strong>
+                  <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                  <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                  <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                  <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                  <span class="ion-text-end">({{ churchPlaces[0].views }}k)</span>
+              </h3>
+            </div>
+          </div>
+        </div>
+      </ion-item>
+      <ion-item>
+        <div class="recent-place d-flex">
+          <div class="picture-box image-sizing">
+            <img [src]="churchPlaces[1].imageURI">
+          </div>
+          <div class="content">
+            <h2 class="d-flex">
+              <span>{{ churchPlaces[1].name }}</span>
+              <ion-icon class="zmdi zmdi-chevron-down align-right"></ion-icon>
+            </h2>
+            <p>{{ churchPlaces[1].tagline }}</p>
+            <div class="d-flex rating">
+              <h3 class="d-flex">
+                <strong class="ion-text-start">{{ churchPlaces[1].rating }}</strong>
+                <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                <span class="ion-text-end">({{ churchPlaces[1].views }}k)</span>
+              </h3>
+            </div>
+          </div>
+        </div>
+      </ion-item>
+      <ion-item>
+        <div class="recent-place d-flex">
+          <div class="picture-box image-sizing">
+            <img [src]="churchPlaces[2].imageURI">
+          </div>
+          <div class="content">
+            <h2 class="d-flex">
+              <span>{{ churchPlaces[2].name }}</span>
+              <ion-icon class="zmdi zmdi-chevron-down align-right"></ion-icon>
+            </h2>
+            <p>{{ churchPlaces[2].tagline }}</p>
+            <div class="d-flex rating">
+              <h3 class="d-flex">
+                <strong class="ion-text-start">{{ churchPlaces[2].rating }}</strong>
+                  <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                  <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                  <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                  <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                  <span class="ion-text-end">({{ churchPlaces[2].views }}k)</span>
+              </h3>
+            </div>
+          </div>
+        </div>
+      </ion-item>
+      <ion-item>
+        <div class="recent-place d-flex">
+          <div class="picture-box image-sizing">
+            <img [src]="churchPlaces[3].imageURI">
+          </div>
+          <div class="content">
+            <h2 class="d-flex">
+              <span>{{ churchPlaces[3].name }}</span>
+              <ion-icon class="zmdi zmdi-chevron-down align-right"></ion-icon>
+            </h2>
+            <p>{{ churchPlaces[3].tagline }}</p>
+            <div class="d-flex rating">
+              <h3 class="d-flex">
+                <strong class="ion-text-start">{{ churchPlaces[3].rating }}</strong>
+                  <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                  <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                  <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                  <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                  <span class="ion-text-end">({{ churchPlaces[3].views }}k)</span>
               </h3>
             </div>
           </div>
