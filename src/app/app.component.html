@@ -26,7 +26,7 @@
           
           <ion-menu-toggle>
             <ion-item>
-              <ion-button [routerLink]="['/', 'user-profile']">
+              <ion-button routerLink="/user-profile">
                 <ion-icon class="zmdi zmdi-account-circle" item-start></ion-icon>
                 <h2>My Profile</h2>
               </ion-button>
@@ -53,14 +53,14 @@
               </ion-button>
             </ion-item>	
             <ion-item>
-              <ion-button>
+              <ion-button routerLink="/about-us">
                 <ion-icon class="zmdi zmdi-card-membership"></ion-icon>
                 <h2>About Us</h2>
               </ion-button>
             </ion-item>
             <ion-menu-toggle>	
               <ion-item>
-                <ion-button [routerLink]="['/', 'support']">
+                <ion-button routerLink="/support">
                   <ion-icon class="zmdi zmdi-account-box-mail"></ion-icon>
                   <h2>Support</h2>
                 </ion-button>

@@ -8,13 +8,20 @@ const routes: Routes = [
   },
   {
     path: "",
-    redirectTo: "pages",
+    redirectTo: "about-us",
     pathMatch: "full",
   },
   {
     path: "welcome",
     loadChildren: () =>
       import("./pages/welcome/welcome.module").then((m) => m.WelcomePageModule),
+  },
+  {
+    path: "about-us",
+    loadChildren: () =>
+      import("./pages/about-us/about-us.module").then(
+        (m) => m.AboutUsPageModule
+      ),
   },
   {
     path: "support",

@@ -62,7 +62,11 @@ const routes: Routes = [
     path: "",
     redirectTo: "/pages/tabs/places",
     pathMatch: "full",
+  },  {
+    path: 'about-us',
+    loadChildren: () => import('./about-us/about-us.module').then( m => m.AboutUsPageModule)
   },
+
 ];
 
 @NgModule({
