@@ -1,4 +1,4 @@
-# 🏰 Traveler Walking Tour Planner App
+# 🏰 Traveler Plan My Walking Tour App
 
 <p align="center">
   <img src="./src/assets/images/previews/initial-release.gif">
