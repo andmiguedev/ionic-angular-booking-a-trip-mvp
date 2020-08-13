@@ -5,6 +5,11 @@ import { PagesPage } from "./pages.page";
 
 const routes: Routes = [
   {
+    path: "",
+    redirectTo: "/pages/tabs/places",
+    pathMatch: "full",
+  },
+  {
     path: "tabs",
     component: PagesPage,
     children: [
@@ -53,20 +58,11 @@ const routes: Routes = [
       },
       {
         path: "",
-        redirectTo: "/pages/tabs/places",
+        redirectTo: "/pages/tabs/trips",
         pathMatch: "full",
       },
     ],
   },
-  {
-    path: "",
-    redirectTo: "/pages/tabs/places",
-    pathMatch: "full",
-  },  {
-    path: 'about-us',
-    loadChildren: () => import('./about-us/about-us.module').then( m => m.AboutUsPageModule)
-  },
-
 ];
 
 @NgModule({
