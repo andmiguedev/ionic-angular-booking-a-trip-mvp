@@ -1,6 +1,7 @@
-import { StopPlace } from "../../../models/stop-place.model";
-import { RenderLocalInfoService } from "../../../services/render-local-info.service";
 import { Component, OnInit } from "@angular/core";
+
+import { StopPlace } from "../../../models/stop-place.model";
+import { DisplayNearbyPlaces } from "src/app/data/nearby-places";
 
 @Component({
   selector: "app-nearby-places",
@@ -10,9 +11,9 @@ import { Component, OnInit } from "@angular/core";
 export class NearbyPlacesPage implements OnInit {
   showLocalPlaces: StopPlace[];
 
-  constructor(private displayLocalPlaces: RenderLocalInfoService) {}
+  constructor(private renderLocalData: DisplayNearbyPlaces) {}
 
   ngOnInit() {
-    this.showLocalPlaces = this.displayLocalPlaces.nearbyPlaces;
+    this.showLocalPlaces = this.renderLocalData.getNearbyPlaces;
   }
 }

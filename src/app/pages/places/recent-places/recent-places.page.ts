@@ -1,6 +1,12 @@
-import { RenderLocalInfoService } from "src/app/services/render-local-info.service";
-import { VisitorPlace } from "./../../../models/visitor-place.model";
 import { Component, OnInit } from "@angular/core";
+
+import { HistoricPlace } from "./../../../models/historic-place.model";
+import { MuseumPlace } from "./../../../models/museum-place.model";
+import { ChurchPlace } from "./../../../models/church-place.model";
+
+import { DisplayTouristicPlaces } from "../../../data/touristic-places";
+import { DisplayMuseumPlaces } from "../../../data/museum-places";
+import { DisplayChurchPlaces } from "../../../data/church-places";
 
 @Component({
   selector: "app-recent-places",
@@ -8,11 +14,19 @@ import { Component, OnInit } from "@angular/core";
   styleUrls: ["./recent-places.page.scss"],
 })
 export class RecentPlacesPage implements OnInit {
-  showHistoricPlaces: VisitorPlace[];
+  historicPlaces: HistoricPlace[];
+  museumPlaces: MuseumPlace[];
+  churchPlaces: ChurchPlace[];
 
-  constructor(private displayLocalPlaces: RenderLocalInfoService) {}
+  constructor(
+    private showHistoricPlaces: DisplayTouristicPlaces,
+    private showMuseumPlaces: DisplayMuseumPlaces,
+    private showChurchPlaces: DisplayChurchPlaces
+  ) {}
 
   ngOnInit() {
-    this.showHistoricPlaces = this.displayLocalPlaces.touristicPlaces;
+    this.historicPlaces = this.showHistoricPlaces.getTouristicPlaces;
+    this.museumPlaces = this.showMuseumPlaces.getMuseumPlaces;
+    this.churchPlaces = this.showChurchPlaces.getChurchPlaces;
   }
 }

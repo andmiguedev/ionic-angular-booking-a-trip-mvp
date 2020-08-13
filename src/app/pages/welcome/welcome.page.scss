@@ -40,16 +40,22 @@ ion-content {
     ion-button {
       font-size: 1.2rem;
       font-weight: 500;
-      height: 50px;
-      width: 190px;
-      margin-left: 12px;
-      border-radius: 5px;
-      letter-spacing: 0px;
-      text-transform: none;
+      height: 45px;
+      width: 185px;
+      margin-left: 15px;
+      border-radius: 15px;
+      border: 1px solid var(--primary-color);
 
       ion-icon {
         font-size: 1.3rem;
         min-width: 28px;
+      }
+
+      &.btn-normal {
+        background: var(--primary-color) !important;
+        color: var(--text-white-color) !important;
+        letter-spacing: 0px;
+        text-transform: none;
       }
 
       &.instagram {

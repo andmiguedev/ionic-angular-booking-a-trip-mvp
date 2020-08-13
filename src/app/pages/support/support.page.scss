@@ -1,24 +1,13 @@
-ion-header,
-ion-toolbar,
-ion-buttons {
-  --background: var(--primary-color);
-  --color: var(--text-white-color);
-}
-
-ion-toolbar {
-  height: 50px;
-
-  ion-buttons {
-    position: absolute;
-    width: 100%;
-    left: 0;
-    top: 10%;
+ion-header {
+  ion-toolbar {
+    --background: var(--primary-color);
+    --color: var(--text-white-color);
+    height: 50px;
   }
 
   ion-title {
     text-transform: uppercase;
-    font-size: 1.2rem;
-    font-weight: 700;
+    font-size: 1.25rem;
   }
 }
 

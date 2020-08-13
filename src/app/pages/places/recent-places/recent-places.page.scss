@@ -1,12 +1,13 @@
 ion-header {
   ion-toolbar {
-    padding: 5px;
+    height: 50px;
+    padding: 3px;
     --background: var(--primary-color);
 
     ion-title,
     ion-icon {
       --color: var(--text-white-color);
-      font-size: 1.4rem;
+      font-size: 1.35rem;
       font-weight: 600;
     }
   }
@@ -24,7 +25,7 @@ ion-header {
         color: var(--primary-color);
 
         &.active {
-          color: var(--secondary-color);
+          color: var(--primary-color);
         }
 
         &.hover {
@@ -38,31 +39,30 @@ ion-header {
     }
 
     ion-segment {
-      background: var(--text-white-color);
-      margin-bottom: 10px;
-      z-index: 9999;
-      position: relative;
+      --background: var(--text-white-color);
+      padding: 9px 15px;
+      border-radius: 0;
 
       ion-segment-button {
+        background: none;
         border: none;
         color: var(--text-black-color);
-        text-transform: uppercase;
-        font-size: 0.8rem;
+        text-transform: capitalize;
+        font-size: 1rem;
         font-weight: 400;
-        opacity: 1;
-        height: 45px;
-        background: none !important;
+        letter-spacing: 0.5px;
+        transition: all 0.3s;
 
         &::after {
           content: "";
           position: absolute;
+          top: 35px;
           bottom: 0;
-          left: 0;
+          left: 25px;
           right: 0;
-          width: 70px;
+          width: 80px;
           height: 3.5px;
           background: var(--primary-color);
-          margin: auto;
           border-radius: 25px;
         }
       }
@@ -94,7 +94,7 @@ ion-content {
           height: 130px;
 
           .picture-box {
-            width: 75%;
+            width: 300px;
             height: 100%;
             margin-left: -80px;
             margin-bottom: -50px;
@@ -121,6 +121,15 @@ ion-content {
                 text-overflow: ellipsis;
                 max-width: calc(100% - 15px);
               }
+
+              // ion-icon {
+              //   position: relative;
+              //   top: 0;
+              //   right: 0;
+              //   bottom: 0;
+              //   left: 10px;
+              //   font-size: 1.5rem;
+              // }
             }
 
             p {
@@ -143,7 +152,6 @@ ion-content {
               bottom: 7px;
 
               h3 {
-                color: var(--text-secondary-color);
                 min-width: 50%;
                 font-size: 1.1rem;
                 font-weight: 400;
@@ -171,7 +179,7 @@ ion-content {
                 min-width: 23px;
                 font-size: 1rem;
                 padding-left: 6px;
-                color: var(--primary-color);
+                color: var(--text-black-color);
               }
             }
           }

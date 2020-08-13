@@ -188,49 +188,10 @@ ion-app[dir="rtl"] {
     }
   }
 
-  .customer-form {
-    ion-label {
-      transform-origin: right top !important;
-      margin-right: 0;
-    }
-
-    ion-item,
-    ion-textarea {
-      text-align: right;
-    }
-    ion-item,
-    ion-input {
-      text-align: right;
-    }
-
-    ion-item .icon-box {
-      margin-right: 0px !important;
-      margin-left: 16px !important;
-    }
-  }
-
   app-user-trips {
     .container .recent ion-item .picture-box[item-start] {
       margin-right: 0 !important;
       margin-left: 14px !important;
-    }
-  }
-
-  app-nearby-places {
-    ion-list,
-    ion-item {
-      &::before,
-      &::after {
-        right: unset;
-        left: 8.5px;
-      }
-    }
-  }
-
-  app-nearby-places {
-    ion-list ion-item .trip-place .picture-box {
-      margin-right: 0px;
-      margin-left: 15px;
     }
   }
 }
