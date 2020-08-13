@@ -1,20 +1,19 @@
-# 🏰 Traveler Plan My Walking Tour App
+# 🏰 Plan My Walking Tour App
 
-<p align="center">
+<p align="left">
   <img src="./src/assets/images/previews/initial-release.gif">
 </p>
-<br />
 
 ## Overview
 
 Prototype Frontend design for an application that travelers can plan their next vacation tour, as they visit a new destination. Tourists can plan which places to visit as they walked around the city. Currently this is only the mockup.
 
+</br />
+
 ### Frontend Technologies
 
 - Ionic 5
 - Angular 9
-
-<br />
 
 ## Features
 
@@ -31,13 +30,13 @@ Prototype Frontend design for an application that travelers can plan their next 
 
 - Local data is used as an example of rendering content for each place.
 
+<br />
+
 ### Current Bugs
 
 - Trip or Tour pages are not integrated in this demo
 - Preview URI images doesn't scale to viewport width
 - Historic places doesn't display by default on places
-
-<br />
 
 ## Build/Run
 
@@ -50,6 +49,8 @@ npm install
 ionic serve
 
 ```
+
+<br />
 
 ## License
 
