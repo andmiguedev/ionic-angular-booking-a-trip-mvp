@@ -1,5 +1,5 @@
 import { Component, OnInit } from "@angular/core";
-// import { Router } from "@angular/router";
+import { Router } from "@angular/router";
 import { AuthenticationService } from "src/app/services/auth/authentication.service";
 
 @Component({
@@ -8,11 +8,15 @@ import { AuthenticationService } from "src/app/services/auth/authentication.serv
   styleUrls: ["./welcome.page.scss"],
 })
 export class WelcomePage implements OnInit {
-  constructor(private authService: AuthenticationService) {}
+  constructor(
+    private authService: AuthenticationService,
+    private router: Router
+  ) {}
 
   ngOnInit() {}
 
   onRedirectToPages() {
-    this.authService.proceed();
+    this.authService.continue();
+    this.router.navigateByUrl("/pages/tabs/places/recent");
   }
 }

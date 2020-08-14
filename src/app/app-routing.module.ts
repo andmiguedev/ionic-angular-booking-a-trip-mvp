@@ -19,13 +19,6 @@ const routes: Routes = [
       import("./pages/welcome/welcome.module").then((m) => m.WelcomePageModule),
   },
   {
-    path: "pages/users/user-profile",
-    loadChildren: () =>
-      import("./pages/users/user-profile/user-profile.module").then(
-        (m) => m.UserProfilePageModule
-      ),
-  },
-  {
     path: "about-us",
     loadChildren: () =>
       import("./pages/about-us/about-us.module").then(

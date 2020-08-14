@@ -10,11 +10,11 @@ export class AuthenticationService {
     return this._isAllowedToContinue;
   }
 
-  proceed() {
+  continue() {
     this._isAllowedToContinue = true;
   }
 
-  deny() {
+  returnBack() {
     this._isAllowedToContinue = false;
   }
 }

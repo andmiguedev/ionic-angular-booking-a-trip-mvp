@@ -28,32 +28,28 @@ const routes: Routes = [
         ],
       },
       {
-        path: "trips",
+        path: "users",
         children: [
+          {
+            path: "profile",
+            loadChildren:
+              "./users/user-profile/user-profile.module#UserProfilePageModule",
+          },
           // {
-          //   path: "",
-          //   loadChildren: "./trips/trips.module#TripsPageModule",
+          //   path: "edit/:pageId",
+          //   loadChildren:
+          //     "./trips/edit-trip/edit-trip.module#EditTripPageModule",
           // },
-          {
-            path: "create",
-            loadChildren:
-              "./trips/create-trip/create-trip.module#CreateTripPageModule",
-          },
-          {
-            path: "edit/:pageId",
-            loadChildren:
-              "./trips/edit-trip/edit-trip.module#EditTripPageModule",
-          },
-          {
-            path: ":pageId",
-            loadChildren:
-              "./trips/detail-trip/detail-trip.module#DetailTripPageModule",
-          },
+          // {
+          //   path: ":pageId",
+          //   loadChildren:
+          //     "./trips/detail-trip/detail-trip.module#DetailTripPageModule",
+          // },
         ],
       },
       {
         path: "",
-        redirectTo: "/pages/tabs/trips",
+        redirectTo: "/pages/tabs/users",
         pathMatch: "full",
       },
     ],
@@ -63,13 +59,6 @@ const routes: Routes = [
     redirectTo: "/pages/tabs/places",
     pathMatch: "full",
   },
-  // {
-  //   path: "user-profile",
-  //   loadChildren: () =>
-  //     import("./users/user-profile/user-profile.module").then(
-  //       (m) => m.UserProfilePageModule
-  //     ),
-  // },
 ];
 
 @NgModule({
