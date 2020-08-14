@@ -24,16 +24,16 @@ ion-header {
         z-index: 99;
         color: var(--primary-color);
 
-        &.active {
-          color: var(--primary-color);
-        }
-
-        &.hover {
-          font-size: 3.5rem;
-        }
-
         &.zmdi-pin {
           font-size: 1.8rem;
+
+          &.active {
+            color: var(--primary-color);
+          }
+
+          &.hover {
+            font-size: 3.5rem;
+          }
         }
       }
     }
@@ -103,7 +103,7 @@ ion-content {
           .content {
             margin: 0 12px;
             position: relative;
-            height: 140px;
+            height: 145px;
             padding-bottom: 40px;
             display: block;
             width: 100%;
@@ -122,14 +122,14 @@ ion-content {
                 max-width: calc(100% - 15px);
               }
 
-              // ion-icon {
-              //   position: relative;
-              //   top: 0;
-              //   right: 0;
-              //   bottom: 0;
-              //   left: 10px;
-              //   font-size: 1.5rem;
-              // }
+              ion-icon {
+                position: relative;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: -15px;
+                font-size: 1.5rem;
+              }
             }
 
             p {
@@ -155,31 +155,38 @@ ion-content {
                 min-width: 50%;
                 font-size: 1.1rem;
                 font-weight: 400;
+
+                strong {
+                  font-weight: 500;
+                  display: block;
+                  min-width: 23px;
+                  font-size: 1rem;
+                  padding-right: 6px;
+                  color: var(--primary-color);
+                }
+
+                ion-icon {
+                  font-size: 1rem;
+                  min-width: 10px;
+                  display: inline-block;
+                  transition: all 0.5s;
+                  color: var(--primary-color);
+                }
               }
 
-              strong {
-                font-weight: 500;
-                display: block;
-                min-width: 23px;
-                font-size: 1rem;
-                padding-right: 6px;
-                color: var(--primary-color);
-              }
+              ion-button {
+                position: absolute;
+                width: 100px;
+                left: 43%;
+                --background: var(--tertiary-color);
+                color: var(--text-white-color);
 
-              ion-icon {
-                font-size: 1rem;
-                min-width: 10px;
-                display: inline-block;
-                transition: all 0.5s;
-              }
-
-              span {
-                font-weight: 500;
-                display: block;
-                min-width: 23px;
-                font-size: 1rem;
-                padding-left: 6px;
-                color: var(--text-black-color);
+                span {
+                  font-weight: 500;
+                  min-width: 23px;
+                  font-size: 0.9rem;
+                  margin-left: -2px;
+                }
               }
             }
           }
