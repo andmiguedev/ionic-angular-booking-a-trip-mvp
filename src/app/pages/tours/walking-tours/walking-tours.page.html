@@ -14,119 +14,38 @@
 <ion-content class="bg-color">
   <div class="container">
     <ion-list lines="none">
-      <ion-item>
+
+    <ion-item-sliding>    
+      <ion-item *ngFor="let tourSchedule of myTourSchedule">
         <div class="info-tour d-flex">
           <div class="picture-box image-sizing" item-start>
-            <img [src]="myTourSchedule[0].imageURI">
+            <img [src]="tourSchedule.imageURI">
           </div>
           <div class="content">
-            <h2>{{ myTourSchedule[0].name }}</h2>
+            <h2>{{ tourSchedule.name }}</h2>
             <h3 class="d-flex">
               <ion-icon class="zmdi zmdi-calendar-check"></ion-icon>
               Start date:
               <span class="ion-text-end">
-              {{ myTourSchedule[0].startDate }}</span>
+              {{ tourSchedule.startDate }}</span>
             </h3>
             <h3 class="d-flex">
               <ion-icon class="zmdi zmdi-time"></ion-icon>
               Local time:
               <span class="ion-text-end">
-              {{ myTourSchedule[0].localTime }}</span>
+              {{ tourSchedule.localTime }}</span>
             </h3>
             <h3 class="d-flex">
               <ion-icon class="zmdi zmdi-walk"></ion-icon>
               No. places:
               <span class="ion-text-end">
-              {{ myTourSchedule[0].numberPlaces }} nearby places</span>
+              {{ tourSchedule.numberPlaces }} nearby places</span>
             </h3>
           </div>
         </div>
       </ion-item>
-       <ion-item>
-        <div class="info-tour d-flex">
-          <div class="picture-box image-sizing" item-start>
-            <img [src]="myTourSchedule[1].imageURI">
-          </div>
-          <div class="content">
-            <h2>{{ myTourSchedule[1].name }}</h2>
-            <h3 class="d-flex">
-              <ion-icon class="zmdi zmdi-calendar-check"></ion-icon>
-              Start date:
-              <span class="ion-text-end">
-              {{ myTourSchedule[1].startDate }}</span>
-            </h3>
-            <h3 class="d-flex">
-              <ion-icon class="zmdi zmdi-time"></ion-icon>
-              Local time:
-              <span class="ion-text-end">
-              {{ myTourSchedule[1].localTime }}</span>
-            </h3>
-            <h3 class="d-flex">
-              <ion-icon class="zmdi zmdi-walk"></ion-icon>
-              No. places:
-              <span class="ion-text-end">
-              {{ myTourSchedule[1].numberPlaces }} nearby places</span>
-            </h3>
-          </div>
-        </div>
-      </ion-item>
-       <ion-item>
-        <div class="info-tour d-flex">
-          <div class="picture-box image-sizing" item-start>
-            <img [src]="myTourSchedule[2].imageURI">
-          </div>
-          <div class="content">
-            <h2>{{ myTourSchedule[2].name }}</h2>
-            <h3 class="d-flex">
-              <ion-icon class="zmdi zmdi-calendar-check"></ion-icon>
-              Start date:
-              <span class="ion-text-end">
-              {{ myTourSchedule[2].startDate }}</span>
-            </h3>
-            <h3 class="d-flex">
-              <ion-icon class="zmdi zmdi-time"></ion-icon>
-              Local time:
-              <span class="ion-text-end">
-              {{ myTourSchedule[2].localTime }}</span>
-            </h3>
-            <h3 class="d-flex">
-              <ion-icon class="zmdi zmdi-walk"></ion-icon>
-              No. places:
-              <span class="ion-text-end">
-              {{ myTourSchedule[2].numberPlaces }} nearby places</span>
-            </h3>
-          </div>
-        </div>
-      </ion-item>
-       <ion-item>
-        <div class="info-tour d-flex">
-          <div class="picture-box image-sizing" item-start>
-            <img [src]="myTourSchedule[3].imageURI">
-          </div>
-          <div class="content">
-            <h2>{{ myTourSchedule[3].name }}</h2>
-            <h3 class="d-flex">
-              <ion-icon class="zmdi zmdi-calendar-check"></ion-icon>
-              Start date:
-              <span class="ion-text-end">
-              {{ myTourSchedule[3].startDate }}</span>
-            </h3>
-            <h3 class="d-flex">
-              <ion-icon class="zmdi zmdi-time"></ion-icon>
-              Local time:
-              <span class="ion-text-end">
-              {{ myTourSchedule[3].localTime }}</span>
-            </h3>
-            <h3 class="d-flex">
-              <ion-icon class="zmdi zmdi-walk"></ion-icon>
-              No. places:
-              <span class="ion-text-end">
-              {{ myTourSchedule[3].numberPlaces }} nearby places</span>
-            </h3>
-          </div>
-        </div>
-      </ion-item>
-    
+    </ion-item-sliding>
+   
     </ion-list>
   </div>
 </ion-content>

@@ -39,20 +39,21 @@
 <ion-content class="bg-color">
   <div class="container" [ngSwitch]="switchTabs">
     <ion-list lines="none" *ngSwitchCase="'historic'">
-      <ion-item>
+      
+      <ion-item *ngFor="let historicPlace of historicPlaces">
         <div class="recent-place d-flex">
           <div class="picture-box image-sizing">
-            <img [src]="historicPlaces[0].imageURI">
+            <img [src]="historicPlace.imageURI">
           </div>
           <div class="content">
             <h2 class="d-flex">
-              <span>{{ historicPlaces[0].name }}</span>
+              <span>{{ historicPlace.name }}</span>
               <ion-icon class="zmdi zmdi-chevron-right align-right"></ion-icon>
             </h2>
-            <p>{{ historicPlaces[0].tagline }}</p>
+            <p>{{ historicPlace.tagline }}</p>
             <div class="d-flex rating">
               <h3 class="d-flex">
-                <strong class="ion-text-start">{{ historicPlaces[0].rating }}</strong>
+                <strong class="ion-text-start">{{ historicPlace.rating }}</strong>
                   <ion-icon class="zmdi zmdi-star active"></ion-icon>
                   <ion-icon class="zmdi zmdi-star active"></ion-icon>
                   <ion-icon class="zmdi zmdi-star active"></ion-icon>
@@ -71,116 +72,23 @@
           </div>
         </div>
       </ion-item>
-      <ion-item>
-        <div class="recent-place d-flex">
-          <div class="picture-box image-sizing">
-            <img [src]="historicPlaces[1].imageURI">
-          </div>
-          <div class="content">
-            <h2 class="d-flex">
-              <span>{{ historicPlaces[1].name }}</span>
-              <ion-icon class="zmdi zmdi-chevron-right align-right"></ion-icon>
-            </h2>
-            <p>{{ historicPlaces[1].tagline }}</p>
-            <div class="d-flex rating">
-              <h3 class="d-flex">
-                <strong class="ion-text-start">{{ historicPlaces[1].rating }}</strong>
-                <ion-icon class="zmdi zmdi-star active"></ion-icon>
-                <ion-icon class="zmdi zmdi-star active"></ion-icon>
-                <ion-icon class="zmdi zmdi-star active"></ion-icon>
-                <ion-icon class="zmdi zmdi-star active"></ion-icon>
-                <!--<span class="ion-text-end">({{ historicPlaces[1].views }}k)</span>-->
-              </h3>
-              <ion-button
-                class="ion-no-margin" 
-                expand="full"
-                (click)="onOpenModal()"
-                >
-                <span>Add To Tour</span>
-              </ion-button>
-            </div>
-          </div>
-        </div>
-      </ion-item>
-      <ion-item>
-        <div class="recent-place d-flex">
-          <div class="picture-box image-sizing">
-            <img [src]="historicPlaces[2].imageURI">
-          </div>
-          <div class="content">
-            <h2 class="d-flex">
-              <span>{{ historicPlaces[2].name }}</span>
-              <ion-icon class="zmdi zmdi-chevron-right align-right"></ion-icon>
-            </h2>
-            <p>{{ historicPlaces[2].tagline }}</p>
-            <div class="d-flex rating">
-              <h3 class="d-flex">
-                <strong class="ion-text-start">{{ historicPlaces[2].rating }}</strong>
-                  <ion-icon class="zmdi zmdi-star active"></ion-icon>
-                  <ion-icon class="zmdi zmdi-star active"></ion-icon>
-                  <ion-icon class="zmdi zmdi-star active"></ion-icon>
-                  <ion-icon class="zmdi zmdi-star active"></ion-icon>
-                  <!--<span class="ion-text-end">({{ historicPlaces[2].views }}k)</span>-->
-              </h3>
-              <ion-button
-                class="ion-no-margin" 
-                expand="full"
-                (click)="onOpenModal()"
-                >
-                <span>Add To Tour</span>
-              </ion-button>
-            </div>
-          </div>
-        </div>
-      </ion-item>
-      <ion-item>
-        <div class="recent-place d-flex">
-          <div class="picture-box image-sizing">
-            <img [src]="historicPlaces[3].imageURI">
-          </div>
-          <div class="content">
-            <h2 class="d-flex">
-              <span>{{ historicPlaces[3].name }}</span>
-              <ion-icon class="zmdi zmdi-chevron-right align-right"></ion-icon>
-            </h2>
-            <p>{{ historicPlaces[3].tagline }}</p>
-            <div class="d-flex rating">
-              <h3 class="d-flex">
-                <strong class="ion-text-start">{{ historicPlaces[3].rating }}</strong>
-                  <ion-icon class="zmdi zmdi-star active"></ion-icon>
-                  <ion-icon class="zmdi zmdi-star active"></ion-icon>
-                  <ion-icon class="zmdi zmdi-star active"></ion-icon>
-                  <ion-icon class="zmdi zmdi-star active"></ion-icon>
-                  <!--<span class="ion-text-end">({{ historicPlaces[3].views }}k)</span>-->
-              </h3>
-              <ion-button
-                class="ion-no-margin" 
-                expand="full"
-                (click)="onOpenModal()"
-                >
-                <span>Add To Tour</span>
-              </ion-button>
-            </div>
-          </div>
-        </div>
-      </ion-item>
     </ion-list>
 
     <ion-list lines="none" *ngSwitchCase="'museum'">
-      <ion-item>
+      <ion-item *ngFor="let museumPlace of museumPlaces">
         <div class="recent-place d-flex">
           <div class="picture-box image-sizing">
-            <img [src]="museumPlaces[0].imageURI">
+            <img [src]="museumPlace.imageURI">
           </div>
           <div class="content">
             <h2 class="d-flex">
-              <span>{{ museumPlaces[0].name }}</span>
+              <span>{{ museumPlace.name }}</span>
               <ion-icon class="zmdi zmdi-chevron-right align-right"></ion-icon>
             </h2>
-            <p>{{ museumPlaces[0].tagline }}</p>
+            <p>{{ museumPlace.tagline }}</p>
             <div class="d-flex rating">
               <h3 class="d-flex">
-                <strong class="ion-text-start">{{ museumPlaces[0].rating }}</strong>
+                <strong class="ion-text-start">{{ museumPlace.rating }}</strong>
                   <ion-icon class="zmdi zmdi-star active"></ion-icon>
                   <ion-icon class="zmdi zmdi-star active"></ion-icon>
                   <ion-icon class="zmdi zmdi-star active"></ion-icon>
@@ -198,116 +106,24 @@
           </div>
         </div>
       </ion-item>
-      <ion-item>
-        <div class="recent-place d-flex">
-          <div class="picture-box image-sizing">
-            <img [src]="museumPlaces[1].imageURI">
-          </div>
-          <div class="content">
-            <h2 class="d-flex">
-              <span>{{ museumPlaces[1].name }}</span>
-              <ion-icon class="zmdi zmdi-chevron-right align-right"></ion-icon>
-            </h2>
-            <p>{{ museumPlaces[1].tagline }}</p>
-            <div class="d-flex rating">
-              <h3 class="d-flex">
-                <strong class="ion-text-start">{{ museumPlaces[1].rating }}</strong>
-                <ion-icon class="zmdi zmdi-star active"></ion-icon>
-                <ion-icon class="zmdi zmdi-star active"></ion-icon>
-                <ion-icon class="zmdi zmdi-star active"></ion-icon>
-                <ion-icon class="zmdi zmdi-star active"></ion-icon>
-                <!--<span class="ion-text-end">({{ museumPlaces[1].views }}k)</span>-->
-              </h3>
-              <ion-button
-                class="ion-no-margin" 
-                expand="full"
-                (click)="onOpenModal()"
-                >
-                <span>Add To Tour</span>
-              </ion-button>
-            </div>
-          </div>
-        </div>
-      </ion-item>
-      <ion-item>
-        <div class="recent-place d-flex">
-          <div class="picture-box image-sizing">
-            <img [src]="museumPlaces[2].imageURI">
-          </div>
-          <div class="content">
-            <h2 class="d-flex">
-              <span>{{ museumPlaces[2].name }}</span>
-              <ion-icon class="zmdi zmdi-chevron-right align-right"></ion-icon>
-            </h2>
-            <p>{{ museumPlaces[2].tagline }}</p>
-            <div class="d-flex rating">
-              <h3 class="d-flex">
-                <strong class="ion-text-start">{{ museumPlaces[2].rating }}</strong>
-                  <ion-icon class="zmdi zmdi-star active"></ion-icon>
-                  <ion-icon class="zmdi zmdi-star active"></ion-icon>
-                  <ion-icon class="zmdi zmdi-star active"></ion-icon>
-                  <ion-icon class="zmdi zmdi-star active"></ion-icon>
-                  <!--<span class="ion-text-end">({{ museumPlaces[2].views }}k)</span>-->
-              </h3>
-              <ion-button
-                class="ion-no-margin" 
-                expand="full"
-                (click)="onOpenModal()"
-                >
-                <span>Add To Tour</span>
-              </ion-button>
-            </div>
-          </div>
-        </div>
-      </ion-item>
-      <ion-item>
-        <div class="recent-place d-flex">
-          <div class="picture-box image-sizing">
-            <img [src]="museumPlaces[3].imageURI">
-          </div>
-          <div class="content">
-            <h2 class="d-flex">
-              <span>{{ museumPlaces[3].name }}</span>
-              <ion-icon class="zmdi zmdi-chevron-right align-right"></ion-icon>
-            </h2>
-            <p>{{ museumPlaces[3].tagline }}</p>
-            <div class="d-flex rating">
-              <h3 class="d-flex">
-                <strong class="ion-text-start">{{ museumPlaces[3].rating }}</strong>
-                  <ion-icon class="zmdi zmdi-star active"></ion-icon>
-                  <ion-icon class="zmdi zmdi-star active"></ion-icon>
-                  <ion-icon class="zmdi zmdi-star active"></ion-icon>
-                  <ion-icon class="zmdi zmdi-star active"></ion-icon>
-                  <!--<span class="ion-text-end">({{ museumPlaces[3].views }}k)</span>-->
-              </h3>
-              <ion-button
-                class="ion-no-margin" 
-                expand="full"
-                (click)="onOpenModal()"
-                >
-                <span>Add To Tour</span>
-              </ion-button>
-            </div>
-          </div>
-        </div>
-      </ion-item>
+
     </ion-list>
 
     <ion-list lines="none" *ngSwitchCase="'church'">
-      <ion-item>
+      <ion-item *ngFor="let churchPlace of churchPlaces">
         <div class="recent-place d-flex">
           <div class="picture-box image-sizing">
-            <img [src]="churchPlaces[0].imageURI">
+            <img [src]="churchPlace.imageURI">
           </div>
           <div class="content">
             <h2 class="d-flex">
-              <span>{{ churchPlaces[0].name }}</span>
+              <span>{{ churchPlace.name }}</span>
               <ion-icon class="zmdi zmdi-chevron-right align-right"></ion-icon>
             </h2>
-            <p>{{ churchPlaces[0].tagline }}</p>
+            <p>{{ churchPlace.tagline }}</p>
             <div class="d-flex rating">
               <h3 class="d-flex">
-                <strong class="ion-text-start">{{ churchPlaces[0].rating }}</strong>
+                <strong class="ion-text-start">{{ churchPlace.rating }}</strong>
                   <ion-icon class="zmdi zmdi-star active"></ion-icon>
                   <ion-icon class="zmdi zmdi-star active"></ion-icon>
                   <ion-icon class="zmdi zmdi-star active"></ion-icon>
@@ -325,99 +141,7 @@
           </div>
         </div>
       </ion-item>
-      <ion-item>
-        <div class="recent-place d-flex">
-          <div class="picture-box image-sizing">
-            <img [src]="churchPlaces[1].imageURI">
-          </div>
-          <div class="content">
-            <h2 class="d-flex">
-              <span>{{ churchPlaces[1].name }}</span>
-              <ion-icon class="zmdi zmdi-chevron-right align-right"></ion-icon>
-            </h2>
-            <p>{{ churchPlaces[1].tagline }}</p>
-            <div class="d-flex rating">
-              <h3 class="d-flex">
-                <strong class="ion-text-start">{{ churchPlaces[1].rating }}</strong>
-                <ion-icon class="zmdi zmdi-star active"></ion-icon>
-                <ion-icon class="zmdi zmdi-star active"></ion-icon>
-                <ion-icon class="zmdi zmdi-star active"></ion-icon>
-                <ion-icon class="zmdi zmdi-star active"></ion-icon>
-                <!--<span class="ion-text-end">({{ churchPlaces[1].views }}k)</span>-->
-              </h3>
-              <ion-button
-                class="ion-no-margin" 
-                expand="full"
-                (click)="onOpenModal()"
-                >
-                <span>Add To Tour</span>
-              </ion-button>
-            </div>
-          </div>
-        </div>
-      </ion-item>
-      <ion-item>
-        <div class="recent-place d-flex">
-          <div class="picture-box image-sizing">
-            <img [src]="churchPlaces[2].imageURI">
-          </div>
-          <div class="content">
-            <h2 class="d-flex">
-              <span>{{ churchPlaces[2].name }}</span>
-              <ion-icon class="zmdi zmdi-chevron-right align-right"></ion-icon>
-            </h2>
-            <p>{{ churchPlaces[2].tagline }}</p>
-            <div class="d-flex rating">
-              <h3 class="d-flex">
-                <strong class="ion-text-start">{{ churchPlaces[2].rating }}</strong>
-                  <ion-icon class="zmdi zmdi-star active"></ion-icon>
-                  <ion-icon class="zmdi zmdi-star active"></ion-icon>
-                  <ion-icon class="zmdi zmdi-star active"></ion-icon>
-                  <ion-icon class="zmdi zmdi-star active"></ion-icon>
-                  <!--<span class="ion-text-end">({{ churchPlaces[2].views }}k)</span>-->
-              </h3>
-              <ion-button
-                class="ion-no-margin" 
-                expand="full"
-                (click)="onOpenModal()"
-                >
-                <span>Add To Tour</span>
-              </ion-button>
-            </div>
-          </div>
-        </div>
-      </ion-item>
-      <ion-item>
-        <div class="recent-place d-flex">
-          <div class="picture-box image-sizing">
-            <img [src]="churchPlaces[3].imageURI">
-          </div>
-          <div class="content">
-            <h2 class="d-flex">
-              <span>{{ churchPlaces[3].name }}</span>
-              <ion-icon class="zmdi zmdi-chevron-right align-right"></ion-icon>
-            </h2>
-            <p>{{ churchPlaces[3].tagline }}</p>
-            <div class="d-flex rating">
-              <h3 class="d-flex">
-                <strong class="ion-text-start">{{ churchPlaces[3].rating }}</strong>
-                  <ion-icon class="zmdi zmdi-star active"></ion-icon>
-                  <ion-icon class="zmdi zmdi-star active"></ion-icon>
-                  <ion-icon class="zmdi zmdi-star active"></ion-icon>
-                  <ion-icon class="zmdi zmdi-star active"></ion-icon>
-                  <!--<span class="ion-text-end">({{ churchPlaces[3].views }}k)</span>-->
-              </h3>
-              <ion-button
-                class="ion-no-margin" 
-                expand="full"
-                (click)="onOpenModal()"
-                >
-                <span>Add To Tour</span>
-              </ion-button>
-            </div>
-          </div>
-        </div>
-      </ion-item>
+     
     </ion-list>
   </div>
 </ion-content>

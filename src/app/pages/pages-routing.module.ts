@@ -28,6 +28,20 @@ const routes: Routes = [
         ],
       },
       {
+        path: "tours",
+        children: [
+          {
+            path: "",
+            loadChildren: "./tours/tours.module#ToursPageModule",
+          },
+          {
+            path: "walking-tours",
+            loadChildren:
+              "./tours/walking-tours/walking-tours.module#WalkingToursPageModule",
+          },
+        ],
+      },
+      {
         path: "users",
         children: [
           {
@@ -76,6 +90,11 @@ const routes: Routes = [
   {
     path: "",
     redirectTo: "/pages/tabs/places",
+    pathMatch: "full",
+  },
+  {
+    path: "",
+    redirectTo: "/pages/tabs/tours",
     pathMatch: "full",
   },
 ];

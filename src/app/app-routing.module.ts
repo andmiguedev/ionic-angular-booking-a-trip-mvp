@@ -10,20 +10,13 @@ const routes: Routes = [
   },
   {
     path: "",
-    redirectTo: "walking-tours",
+    redirectTo: "pages",
     pathMatch: "full",
   },
   {
     path: "welcome",
     loadChildren: () =>
       import("./pages/welcome/welcome.module").then((m) => m.WelcomePageModule),
-  },
-  {
-    path: "walking-tours",
-    loadChildren: () =>
-      import("./pages/tours/walking-tours/walking-tours.module").then(
-        (m) => m.WalkingToursPageModule
-      ),
   },
 ];
 
