@@ -10,7 +10,7 @@ const routes: Routes = [
   },
   {
     path: "",
-    redirectTo: "welcome",
+    redirectTo: "walking-tours",
     pathMatch: "full",
   },
   {
@@ -19,16 +19,11 @@ const routes: Routes = [
       import("./pages/welcome/welcome.module").then((m) => m.WelcomePageModule),
   },
   {
-    path: "about-us",
+    path: "walking-tours",
     loadChildren: () =>
-      import("./pages/about-us/about-us.module").then(
-        (m) => m.AboutUsPageModule
+      import("./pages/tours/walking-tours/walking-tours.module").then(
+        (m) => m.WalkingToursPageModule
       ),
-  },
-  {
-    path: "support",
-    loadChildren: () =>
-      import("./pages/support/support.module").then((m) => m.SupportPageModule),
   },
 ];
 

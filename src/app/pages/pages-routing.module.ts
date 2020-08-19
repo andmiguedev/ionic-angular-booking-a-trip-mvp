@@ -52,6 +52,25 @@ const routes: Routes = [
         redirectTo: "/pages/tabs/users",
         pathMatch: "full",
       },
+      {
+        path: "landing",
+        children: [
+          {
+            path: "about",
+            loadChildren:
+              "./landing/about-us/about-us.module#AboutUsPageModule",
+          },
+          {
+            path: "support",
+            loadChildren: "./landing/support/support.module#SupportPageModule",
+          },
+        ],
+      },
+      {
+        path: "",
+        redirectTo: "/pages/tabs/landing",
+        pathMatch: "full",
+      },
     ],
   },
   {
