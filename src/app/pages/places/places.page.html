@@ -43,7 +43,7 @@
       <ion-item *ngFor="let historicPlace of historicPlaces">
         <div class="recent-place d-flex">
           <div class="picture-box image-sizing">
-            <img [src]="historicPlace.imageURI">
+            <ion-img [src]="historicPlace.imageURI"></ion-img>
           </div>
           <div class="content">
             <h2 class="d-flex">
@@ -78,7 +78,7 @@
       <ion-item *ngFor="let museumPlace of museumPlaces">
         <div class="recent-place d-flex">
           <div class="picture-box image-sizing">
-            <img [src]="museumPlace.imageURI">
+            <ion-img [src]="museumPlace.imageURI"></ion-img>
           </div>
           <div class="content">
             <h2 class="d-flex">
@@ -113,7 +113,7 @@
       <ion-item *ngFor="let churchPlace of churchPlaces">
         <div class="recent-place d-flex">
           <div class="picture-box image-sizing">
-            <img [src]="churchPlace.imageURI">
+            <ion-img [src]="churchPlace.imageURI"></ion-img>
           </div>
           <div class="content">
             <h2 class="d-flex">

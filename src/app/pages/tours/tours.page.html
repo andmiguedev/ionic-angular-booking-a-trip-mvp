@@ -19,7 +19,7 @@
       *ngFor="let tourSchedule of myTourSchedule"
       #walkingTour
     >    
-      <ion-item [routerLink]="['/', 'pages', 'tours', 'tourSchedule.id']">
+      <ion-item>
         <div class="info-tour d-flex">
           <div class="picture-box image-sizing" item-start>
             <img [src]="tourSchedule.imageURI">
@@ -59,6 +59,7 @@
       <ion-item-options side="end">
         <ion-item-option 
           color="warning"
+          (click)="onStartTour()"
         >
           <ion-icon name="arrow-redo-outline" slot="icon-only"></ion-icon>
           Start Tour

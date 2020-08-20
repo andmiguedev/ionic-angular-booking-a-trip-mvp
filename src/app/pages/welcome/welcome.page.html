@@ -1,7 +1,7 @@
 <ion-content>
   <div class="container">
     <div class="logo-box" text-center>
-      <img src="assets/images/logo/temp-logo.jpg">
+      <img src="assets/images/logo/dummy-logo.png">
     </div>
     <h2 class="ion-text-center">What would you like to do?</h2>
     <ion-buttons slot="end">
@@ -15,35 +15,30 @@
       <ion-button
         fill="clear"
         size="large"
+        class="btn-clear"
         expand="full"
         (click)="onRedirectToPages()"
       >
         Login
       </ion-button>
     </ion-buttons>
-    
-    <!--
-    <h2 class="ion-text-center">
-      Continue with
-    </h2>
-     <ion-buttons slot="end">
-      <ion-button 
-        size="large" 
-        expand="full" 
-        class="instagram"
-        (click)="onNavigateTo()">
-          <ion-icon class="zmdi zmdi-instagram"></ion-icon>&nbsp;
-          instagram
-      </ion-button>
-      <ion-button 
-        size="large" 
-        expand="full" 
-        class="twitter"
-        (click)="onNavigateTo()">
-        <ion-icon class="zmdi zmdi-twitter"></ion-icon>&nbsp;
-        twitter
-      </ion-button>
-    </ion-buttons>
-    -->
   </div>
 </ion-content>
+
+<ion-footer class="ion-no-border">
+  <h2 class="ion-text-center">or continue with</h2>
+    <ion-row>
+      <ion-col size="6">
+        <ion-button size="large" expand="full" class="btn-normal twitter">
+          <ion-icon class="zmdi zmdi-twitter"></ion-icon>&nbsp;
+          twitter
+        </ion-button>
+      </ion-col>
+      <ion-col size="6">
+        <ion-button size="large" expand="full" class="btn-normal instagram">
+          <ion-icon class="zmdi zmdi-instagram"></ion-icon>&nbsp;
+          instagram
+        </ion-button>
+      </ion-col>
+    </ion-row>
+</ion-footer>

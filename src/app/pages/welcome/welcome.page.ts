@@ -17,6 +17,9 @@ export class WelcomePage implements OnInit {
 
   onRedirectToPages() {
     this.authService.continue();
-    this.router.navigateByUrl("/pages/tabs/places/search");
+
+    setTimeout(() => {
+      this.router.navigateByUrl("/pages/tabs/places/search");
+    }, 1000);
   }
 }

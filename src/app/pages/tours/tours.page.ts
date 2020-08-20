@@ -47,4 +47,8 @@ export class ToursPage implements OnInit {
     this.router.navigate(["/", "pages", "tabs", "tours", "edit", tourId]);
     console.log("Walking tour ID: ", tourId);
   }
+
+  onStartTour() {
+    this.router.navigateByUrl("/pages/tabs/places/nearby");
+  }
 }
