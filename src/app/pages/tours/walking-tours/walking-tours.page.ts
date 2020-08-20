@@ -9,4 +9,5 @@ export class WalkingToursPage implements OnInit {
   constructor() {}
 
   ngOnInit() {}
+  
 }

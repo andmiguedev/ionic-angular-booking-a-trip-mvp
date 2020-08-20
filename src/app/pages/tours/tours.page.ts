@@ -1,7 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 
-import { ActivatedRoute } from "@angular/router";
-import { NavController } from "@ionic/angular";
+import { ActivatedRoute, Router } from "@angular/router";
+import { NavController, IonItemSliding } from "@ionic/angular";
 
 import { TourInfo } from "../../models/tour-info.model";
 import { DisplayTourSchedule } from "../../data/tour-schedule";
@@ -18,7 +18,8 @@ export class ToursPage implements OnInit {
   constructor(
     private loadTourSchedule: DisplayTourSchedule,
     private route: ActivatedRoute,
-    private navCtrl: NavController
+    private navCtrl: NavController,
+    private router: Router
   ) {}
 
   ngOnInit() {
@@ -37,5 +38,13 @@ export class ToursPage implements OnInit {
 
     // Store all the Walking Tours that are being displayed
     this.myTourSchedule = this.loadTourSchedule.getTourSchedule;
+  }
+
+  // Changes general info of each Walking tour
+  onEditTour(tourId: string, walkingTour: IonItemSliding) {
+    walkingTour.close();
+
+    this.router.navigate(["/", "pages", "tabs", "tours", "edit", tourId]);
+    console.log("Walking tour ID: ", tourId);
   }
 }
