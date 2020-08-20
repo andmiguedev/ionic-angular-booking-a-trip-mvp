@@ -44,4 +44,8 @@ export class DisplayTourSchedule {
   get getTourSchedule() {
     return [...this._tourSchedule];
   }
+
+  getEachWalkingTour(id: string) {
+    return { ...this._tourSchedule.find((p) => p.id === id) };
+  }
 }

@@ -25,6 +25,11 @@ const routes: Routes = [
             loadChildren:
               "./places/nearby-places/nearby-places.module#NearbyPlacesPageModule",
           },
+          {
+            path: "search",
+            loadChildren:
+              "./places/search-place/search-place.module#SearchPlacePageModule",
+          },
         ],
       },
       {
@@ -96,6 +101,13 @@ const routes: Routes = [
     path: "",
     redirectTo: "/pages/tabs/tours",
     pathMatch: "full",
+  },
+  {
+    path: "search-place",
+    loadChildren: () =>
+      import("./places/search-place/search-place.module").then(
+        (m) => m.SearchPlacePageModule
+      ),
   },
 ];
 
