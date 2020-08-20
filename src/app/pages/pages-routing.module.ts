@@ -15,13 +15,13 @@ const routes: Routes = [
             path: "",
             loadChildren: "./places/places.module#PlacesPageModule",
           },
+          // {
+          //   path: "recent",
+          //   loadChildren:
+          //     "./places/recent-places/recent-places.module#RecentPlacesPageModule",
+          // },
           {
-            path: "recent",
-            loadChildren:
-              "./places/recent-places/recent-places.module#RecentPlacesPageModule",
-          },
-          {
-            path: "local",
+            path: "nearby",
             loadChildren:
               "./places/nearby-places/nearby-places.module#NearbyPlacesPageModule",
           },
@@ -39,10 +39,15 @@ const routes: Routes = [
             path: "",
             loadChildren: "./tours/tours.module#ToursPageModule",
           },
+          // {
+          //   path: "walking-tours",
+          //   loadChildren:
+          //     "./tours/walking-tours/walking-tours.module#WalkingToursPageModule",
+          // },
           {
-            path: "walking-tours",
+            path: "edit/:tourId",
             loadChildren:
-              "./tours/walking-tours/walking-tours.module#WalkingToursPageModule",
+              "./tours/edit-tour/edit-tour.module#EditTourPageModule",
           },
         ],
       },
@@ -107,6 +112,13 @@ const routes: Routes = [
     loadChildren: () =>
       import("./places/search-place/search-place.module").then(
         (m) => m.SearchPlacePageModule
+      ),
+  },
+  {
+    path: "edit-tour",
+    loadChildren: () =>
+      import("./tours/edit-tour/edit-tour.module").then(
+        (m) => m.EditTourPageModule
       ),
   },
 ];

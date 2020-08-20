@@ -1,20 +1,20 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
+import { NgModule } from "@angular/core";
+import { CommonModule } from "@angular/common";
+import { FormsModule } from "@angular/forms";
 
-import { IonicModule } from '@ionic/angular';
+import { IonicModule } from "@ionic/angular";
 
-import { WalkingToursPageRoutingModule } from './walking-tours-routing.module';
+import { WalkingToursPageRoutingModule } from "./walking-tours-routing.module";
 
-import { WalkingToursPage } from './walking-tours.page';
+import { WalkingToursPage } from "./walking-tours.page";
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    WalkingToursPageRoutingModule
+    WalkingToursPageRoutingModule,
   ],
-  declarations: [WalkingToursPage]
+  declarations: [WalkingToursPage],
 })
 export class WalkingToursPageModule {}

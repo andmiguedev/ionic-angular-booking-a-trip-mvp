@@ -1,0 +1,71 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button color="light" autoHide="false"></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      My Tour Schedule
+    </ion-title>
+   <div class="ion-text-end">
+      <ion-icon class="zmdi zmdi-share"></ion-icon>
+   </div>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="bg-color">
+  <div class="container">
+    <ion-list lines="none">
+
+    <ion-item-sliding 
+      *ngFor="let tourSchedule of myTourSchedule"
+      #walkingTour
+    >    
+      <ion-item>
+        <div class="info-tour d-flex">
+          <div class="picture-box image-sizing" item-start>
+            <img [src]="tourSchedule.imageURI">
+          </div>
+          <div class="content">
+            <h2>{{ tourSchedule.name }}</h2>
+            <h3 class="d-flex">
+              <ion-icon class="zmdi zmdi-calendar-check"></ion-icon>
+              Start date:
+              <span class="ion-text-end">
+              {{ tourSchedule.startDate }}</span>
+            </h3>
+            <h3 class="d-flex">
+              <ion-icon class="zmdi zmdi-time"></ion-icon>
+              Local time:
+              <span class="ion-text-end">
+              {{ tourSchedule.localTime }}</span>
+            </h3>
+            <h3 class="d-flex">
+              <ion-icon class="zmdi zmdi-walk"></ion-icon>
+              No. places:
+              <span class="ion-text-end">
+              {{ tourSchedule.numberPlaces }} nearby places</span>
+            </h3>
+          </div>
+        </div>
+      </ion-item>
+      <ion-item-options side="start">
+        <ion-item-option 
+          color="primary"
+          >
+          <ion-icon name="create-outline" slot="icon-only"></ion-icon>
+          Change Info
+        </ion-item-option>
+      </ion-item-options>
+      <ion-item-options side="end">
+        <ion-item-option 
+          color="warning"
+          (click)="onEditTour(tourSchedule.id, walkingTour)"
+          >
+          <ion-icon name="arrow-redo-outline" slot="icon-only"></ion-icon>
+          Start Tour
+        </ion-item-option>
+      </ion-item-options>
+    </ion-item-sliding>
+   
+    </ion-list>
+  </div>
+</ion-content>
