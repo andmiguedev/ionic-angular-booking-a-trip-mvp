@@ -4,41 +4,38 @@
   <img src="./src/assets/images/previews/initial-release.gif">
 </p>
 
-<br />
+## Description
 
-## Overview
-
-Prototype Frontend design for an application that travelers can plan their next vacation tour, as they visit a new destination. Tourists can plan which places to visit as they walked around the city. Currently this is only the mockup.
+Working prototype demo for an application that help travelers organize their daily walking tours, as they visit a specific city and its most popular places.
 
 <br />
+
+### General Summary
+
+This is a minimum viable product, coded as a front-end mobile app design, using an Open source UI toolkit components from [Ionic framework] (https://ionicframework.com/).
 
 ### Frontend Technologies
 
-- Ionic 5
-- Angular 9
+- [Angular 9](https://angular.io/api)
+- [Ionic 5](https://ionicframework.com/docs/components)
 
-## Features
+### Features
 
-- [x] Tab navigation for existing place pages
-- [x] Sidedrawer menu toggle all current pages
+- [x] Spinner loads when User clicks on Login button 
+- [x] Routes (pages) are protected from being accessible from a typed URL
+- [x] Logout button navigates User back to Welcome page
+- [x] Tab navigation and Side drawer navigation are added for pages
+- [x] Sliding component can be used to swipe an Item, and trigger 1 or 2 action events
+- [x] A temporary Modal is displayed for Call to Action event 
+- [x] Local data is rendered for city place in places pages  
 
-### App Structure
+### Constraints
 
-- Current places pages are: recent-places, nearby-places, and a choose a place.
-
-- Additional pages include, user-profile and contact-support
-
-- Current classes store properties of each type of model places
-
-- Local data is used as an example of rendering content for each place.
-
-<br />
-
-### Current Bugs
-
-- Trip or Tour pages are not integrated in this demo
+- Tabs navigation is included for all related pages
 - Preview URI images doesn't scale to viewport width
 - Historic places doesn't display by default on places
+
+<br />
 
 ## Build/Run
 
