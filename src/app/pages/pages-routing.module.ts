@@ -5,11 +5,6 @@ import { PagesPage } from "./pages.page";
 
 const routes: Routes = [
   {
-    path: "",
-    redirectTo: "/pages/tabs/places",
-    pathMatch: "full",
-  },
-  {
     path: "tabs",
     component: PagesPage,
     children: [
@@ -20,49 +15,108 @@ const routes: Routes = [
             path: "",
             loadChildren: "./places/places.module#PlacesPageModule",
           },
+          // {
+          //   path: "recent",
+          //   loadChildren:
+          //     "./places/recent-places/recent-places.module#RecentPlacesPageModule",
+          // },
           {
-            path: "recent",
-            loadChildren:
-              "./places/recent-places/recent-places.module#RecentPlacesPageModule",
-          },
-          {
-            path: "local",
+            path: "nearby",
             loadChildren:
               "./places/nearby-places/nearby-places.module#NearbyPlacesPageModule",
+          },
+          {
+            path: "search",
+            loadChildren:
+              "./places/search-place/search-place.module#SearchPlacePageModule",
           },
         ],
       },
       {
-        path: "trips",
+        path: "tours",
         children: [
           {
             path: "",
-            loadChildren: "./trips/trips.module#TripsPageModule",
+            loadChildren: "./tours/tours.module#ToursPageModule",
+          },
+          // {
+          //   path: "walking-tours",
+          //   loadChildren:
+          //     "./tours/walking-tours/walking-tours.module#WalkingToursPageModule",
+          // },
+          {
+            path: "edit/:tourId",
+            loadChildren:
+              "./tours/edit-tour/edit-tour.module#EditTourPageModule",
+          },
+        ],
+      },
+      {
+        path: "users",
+        children: [
+          {
+            path: "",
+            loadChildren: "./users/users.module#UsersPageModule",
           },
           {
-            path: "create",
+            path: "signup",
             loadChildren:
-              "./trips/create-trip/create-trip.module#CreateTripPageModule",
+              "./users/user-signup/user-signup.module#UserSignupPageModule",
           },
           {
-            path: "edit/:pageId",
+            path: "profile",
             loadChildren:
-              "./trips/edit-trip/edit-trip.module#EditTripPageModule",
+              "./users/user-profile/user-profile.module#UserProfilePageModule",
+          },
+          // {
+          //   path: "edit/:pageId",
+          //   loadChildren:
+          //     "./trips/edit-trip/edit-trip.module#EditTripPageModule",
+          // },
+          // {
+          //   path: ":pageId",
+          //   loadChildren:
+          //     "./trips/detail-trip/detail-trip.module#DetailTripPageModule",
+          // },
+        ],
+      },
+      {
+        path: "",
+        redirectTo: "/pages/tabs/users",
+        pathMatch: "full",
+      },
+      {
+        path: "landing",
+        children: [
+          {
+            path: "about",
+            loadChildren:
+              "./landing/about-us/about-us.module#AboutUsPageModule",
           },
           {
-            path: ":pageId",
-            loadChildren:
-              "./trips/detail-trip/detail-trip.module#DetailTripPageModule",
+            path: "support",
+            loadChildren: "./landing/support/support.module#SupportPageModule",
           },
         ],
       },
       {
         path: "",
-        redirectTo: "/pages/tabs/trips",
+        redirectTo: "/pages/tabs/landing",
         pathMatch: "full",
       },
     ],
   },
+  {
+    path: "",
+    redirectTo: "/pages/tabs/places",
+    pathMatch: "full",
+  },
+  {
+    path: "",
+    redirectTo: "/pages/tabs/tours",
+    pathMatch: "full",
+  },
+
 ];
 
 @NgModule({

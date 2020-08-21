@@ -29,9 +29,10 @@
 :root {
   --primary-color: #0fc874;
   --secondary-color: #ffca28;
-  --background-color: #f9f6fa;
-  --text-light-color: #b3b3b3;
-  --text-dark-color: #838383;
+  --tertiary-color: #ffb951;
+  --background-color: #ededed;
+  --text-light-color: #fbfffb;
+  --text-dark-color: #3f3d3d;
   --text-black-color: #000;
   --text-white-color: #fff;
   --text-red-color: #ed1438;
@@ -40,7 +41,7 @@
 
 /* Variables used through all the pages  */
 .bg-color {
-  --background: var(--background-color);
+  background: var(--background-color);
 }
 
 .d-flex {

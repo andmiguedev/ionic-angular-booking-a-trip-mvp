@@ -1,0 +1,84 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button color="light" defaultHref="/welcome" text="" name="arrow-back-outline"></ion-back-button>
+    </ion-buttons>
+    <ion-title>
+      Register an account
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="customer-form">
+    <ion-list lines="none">
+
+      <ion-item lines="none">
+        <div class="d-flex">
+          <div class="icon-box ion-text-start">
+            <ion-icon class="zmdi zmdi-account"></ion-icon>
+          </div>
+          <div class="input-box">
+            <ion-label mode="md" position="stacked">
+              Username
+            </ion-label>
+            <ion-input mode="md" type="text" placeholder="WalkingTour123"></ion-input>
+          </div>
+        </div>
+      </ion-item>
+
+      <ion-item lines="none">
+        <div class="d-flex">
+          <div class="icon-box ion-text-start">
+            <ion-icon class="zmdi zmdi-email"></ion-icon>
+          </div>
+          <div class="input-box">
+            <ion-label mode="md" position="stacked">
+              Email address
+            </ion-label>
+            <ion-input mode="md" type="email" placeholder="walking_tour@mail.com"></ion-input>
+          </div>
+        </div>
+      </ion-item>
+
+      <ion-item lines="none">
+        <div class="d-flex">
+          <div class="icon-box ion-text-start">
+            <ion-icon class="zmdi zmdi-shield-security"></ion-icon>
+          </div>
+          <div class="input-box">
+            <ion-label mode="md" position="stacked">
+              Password
+            </ion-label>
+            <ion-input mode="md" type="password" placeholder="Your password"></ion-input>
+          </div>
+        </div>
+      </ion-item>
+
+      <ion-item lines="none">
+        <div class="d-flex">
+          <div class="icon-box ion-text-start">
+           <ion-icon class="zmdi zmdi-smartphone"></ion-icon>
+          </div>
+          <div class="input-box">
+            <ion-label mode="md" position="stacked">
+              Phone number
+            </ion-label>
+            <ion-input mode="md" type="text" placeholder="+1 (222) 333 4444"></ion-input>
+          </div>
+        </div>
+      </ion-item>
+
+      <p class="d-flex">
+        <span class="align-right">
+          Check your phone after registration. We'll send you a confirmation number. 
+        </span>
+      </p>
+
+    </ion-list> 
+  </div>
+</ion-content>
+
+<ion-footer class="ion-no-border">
+  <ion-button size="large" expand="full" class="btn-normal">Continue</ion-button>
+</ion-footer>

@@ -1,0 +1,78 @@
+<ion-header>
+   <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button color="light"></ion-menu-button>
+    </ion-buttons>
+     <ion-title>Support</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <h1>Let us know if you have an issue</h1>
+  <div class="customer-form">
+    <ion-list lines="none">
+      <ion-item lines="none">
+        <div class="d-flex">
+          <div class="ion-text-start">
+             <ion-icon class="zmdi zmdi-account"></ion-icon>
+          </div>
+          <div class="input-box">
+            <ion-input mode="md" type="name" placeholder="Your Name *"></ion-input>
+          </div>
+        </div>
+      </ion-item>
+      <ion-item lines="none">
+        <div class="d-flex">
+          <div class="ion-text-start">
+             <ion-icon class="zmdi zmdi-email-open"></ion-icon>
+          </div>
+          <div class="input-box">
+            <ion-input mode="md" type="email" placeholder="Your Email *"></ion-input>
+          </div>
+        </div>
+      </ion-item>
+      <ion-item lines="none">
+        <div class="d-flex">
+         <div class="ion-text-start">
+            <ion-icon class="zmdi zmdi-assignment"></ion-icon>
+          </div>
+          <div class="input-box">
+            <ion-input mode="md" type="text" placeholder="Subject *"></ion-input>
+          </div>
+        </div>
+      </ion-item>
+      <ion-item lines="none">
+        <div class="d-flex">
+          <div class="input-box">
+            <ion-textarea type="text" rows="4"></ion-textarea>
+          </div>
+        </div>
+      </ion-item>
+      <ion-grid>
+        <ion-row>
+          <ion-list>
+            <ion-radio-group>
+              <ion-col size="4">
+						      <ion-radio checked="true" value="comment" item-start></ion-radio>
+						      <ion-label>comment</ion-label>
+              </ion-col>
+              <ion-col size="4">
+                  <ion-radio checked="true" value="concern" item-start></ion-radio>
+						      <ion-label>concerns</ion-label>
+              </ion-col>
+              <ion-col size="4">
+                 <ion-radio checked="true"value="report" item-start></ion-radio>
+						      <ion-label>report a bug</ion-label>
+              </ion-col>
+            </ion-radio-group>
+          </ion-list>
+        </ion-row>
+      </ion-grid>
+
+
+    </ion-list>
+    <ion-buttons slot="end">
+      <ion-button size="large" expand="full" class="btn-normal">Submit</ion-button>
+    </ion-buttons>
+  </div>
+</ion-content>

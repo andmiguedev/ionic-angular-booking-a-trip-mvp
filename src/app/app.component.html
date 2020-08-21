@@ -26,7 +26,7 @@
           
           <ion-menu-toggle>
             <ion-item>
-              <ion-button routerLink="/user-profile">
+              <ion-button [routerLink]="['/', 'pages', 'tabs', 'users', 'profile']">
                 <ion-icon class="zmdi zmdi-account-circle" item-start></ion-icon>
                 <h2>My Profile</h2>
               </ion-button>
@@ -34,18 +34,20 @@
           </ion-menu-toggle>
           <ion-menu-toggle>
             <ion-item>
-              <ion-button [routerLink]="['/', 'pages', 'tabs', 'places', 'recent']">
+              <ion-button [routerLink]="['/', 'pages', 'tabs', 'places']">
                 <ion-icon class="zmdi zmdi-compass"></ion-icon>
                 <h2>My Places</h2>
               </ion-button> 
             </ion-item>
           </ion-menu-toggle>
+          <!--
             <ion-item>
               <ion-button>
                 <ion-icon class="zmdi zmdi-airplane"></ion-icon>
                 <h2>My Trips</h2>
               </ion-button>
             </ion-item>
+            -->
             <ion-item>
               <ion-button>
                 <ion-icon class="zmdi zmdi-thumb-up"></ion-icon>
@@ -54,7 +56,7 @@
             </ion-item>	
             <ion-menu-toggle>
               <ion-item>
-                <ion-button routerLink="/about-us">
+                <ion-button [routerLink]="['/', 'pages', 'tabs', 'landing', 'about']">
                   <ion-icon class="zmdi zmdi-card-membership"></ion-icon>
                   <h2>About Us</h2>
                 </ion-button>
@@ -62,12 +64,20 @@
             </ion-menu-toggle>
             <ion-menu-toggle>	
               <ion-item>
-                <ion-button routerLink="/support">
+                <ion-button [routerLink]="['/', 'pages', 'tabs', 'landing', 'support']">
                   <ion-icon class="zmdi zmdi-account-box-mail"></ion-icon>
                   <h2>Support</h2>
                 </ion-button>
               </ion-item>
             </ion-menu-toggle>
+            <ion-menu-toggle>	
+              <ion-item>
+                <ion-button (click)="onLogoutUser()">
+                  <ion-icon class="zmdi zmdi-caret-left-circle"></ion-icon>
+                  <h2>Logout</h2>
+                </ion-button>
+              </ion-item>
+            </ion-menu-toggle>	
         
         </ion-list>
       </ion-content>

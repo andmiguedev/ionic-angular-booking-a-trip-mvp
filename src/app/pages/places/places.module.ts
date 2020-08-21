@@ -6,6 +6,7 @@ import { Routes, RouterModule } from "@angular/router";
 import { IonicModule } from "@ionic/angular";
 
 import { PlacesPage } from "./places.page";
+import { SuccessModalComponent } from "../../components/modals/success-modal/success-modal.component";
 
 const routes: Routes = [
   {
@@ -21,6 +22,7 @@ const routes: Routes = [
     IonicModule,
     RouterModule.forChild(routes),
   ],
-  declarations: [PlacesPage],
+  declarations: [PlacesPage, SuccessModalComponent],
+  entryComponents: [SuccessModalComponent],
 })
 export class PlacesPageModule {}
