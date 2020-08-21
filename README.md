@@ -8,11 +8,10 @@
 
 Working prototype demo for an application that help travelers organize their daily walking tours, as they visit a specific city and its most popular places.
 
-<br />
 
-### General Summary
+## General Summary
 
-This is a minimum viable product, coded as a front-end mobile app design, using an Open source UI toolkit components from [Ionic framework] (https://ionicframework.com/).
+This is a minimum viable product, coded as a front-end mobile app design, using an Open source UI toolkit components from [Ionic framework](https://ionicframework.com/).
 
 ### Frontend Technologies
 
@@ -29,13 +28,13 @@ This is a minimum viable product, coded as a front-end mobile app design, using 
 - [x] A temporary Modal is displayed for Call to Action event 
 - [x] Local data is rendered for city place in places pages  
 
+
 ### Constraints
 
 - Tabs navigation is included for all related pages
 - Preview URI images doesn't scale to viewport width
 - Historic places doesn't display by default on places
 
-<br />
 
 ## Build/Run
 
@@ -49,7 +48,6 @@ ionic serve
 
 ```
 
-<br />
 
 ## License
 
