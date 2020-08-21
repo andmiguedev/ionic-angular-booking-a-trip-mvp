@@ -55,6 +55,15 @@ const routes: Routes = [
         path: "users",
         children: [
           {
+            path: "",
+            loadChildren: "./users/users.module#UsersPageModule",
+          },
+          {
+            path: "signup",
+            loadChildren:
+              "./users/user-signup/user-signup.module#UserSignupPageModule",
+          },
+          {
             path: "profile",
             loadChildren:
               "./users/user-profile/user-profile.module#UserProfilePageModule",
@@ -107,20 +116,7 @@ const routes: Routes = [
     redirectTo: "/pages/tabs/tours",
     pathMatch: "full",
   },
-  {
-    path: "search-place",
-    loadChildren: () =>
-      import("./places/search-place/search-place.module").then(
-        (m) => m.SearchPlacePageModule
-      ),
-  },
-  {
-    path: "edit-tour",
-    loadChildren: () =>
-      import("./tours/edit-tour/edit-tour.module").then(
-        (m) => m.EditTourPageModule
-      ),
-  },
+
 ];
 
 @NgModule({

@@ -14,6 +14,11 @@ export class WelcomePage implements OnInit {
   ) {}
 
   ngOnInit() {}
+  
+  onNavigateToSignup() {
+    this.authService.continue();
+    this.router.navigateByUrl("/pages/tabs/users/signup");
+  }
 
   onRedirectToPages() {
     this.authService.continue();

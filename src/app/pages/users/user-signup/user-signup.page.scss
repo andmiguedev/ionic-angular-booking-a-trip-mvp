@@ -1,0 +1,94 @@
+ion-header {
+  ion-toolbar {
+    height: 50px;
+    padding: 3px;
+    --background: var(--primary-color);
+
+    ion-title,
+    ion-icon {
+      --color: var(--text-white-color);
+      font-size: 1.35rem;
+      font-weight: 600;
+    }
+  }
+}
+
+ion-content {
+   .customer-form {
+      display: block;
+      overflow: hidden;
+      position: relative;
+      margin: 0 auto;
+      width: calc(100% - 60px);
+      z-index: 99;
+      // padding: 0 20px;
+      border-top: 6px solid var(--background-color);
+      padding-top: 34px;
+
+      ion-list {
+         background: var(--full-transparent) !important;
+         margin: 0;
+         padding: 0;
+         
+         ion-item {
+            .icon-box {
+               min-width: 35px;
+
+               ion-icon {
+                margin: 0;
+                position: relative;
+                color: var(--primary-color);
+                font-size: 1.7rem;
+                margin-right: 20px;
+                min-width: 35px;
+              }
+            }
+
+            &:last-of-type {
+               margin-bottom: 15px !important;
+            }
+
+            .input-box {
+               width: 100%;
+               border-bottom: 1px solid rgba(204, 204, 204, 0.6) !important;
+               padding-bottom: 5px;
+
+                ion-label {
+                  color: var(--text-black-color);
+                  font-size: 0.75rem !important;
+                  font-weight: 400;
+                  margin-bottom: 6px !important;
+                  transform: unset !important;
+                  text-transform: uppercase;
+                  letter-spacing: 0.5px !important;
+               }
+
+               ion-input {
+                  --padding: 0 !important;
+                  font-size: 1.2rem !important;
+                  font-weight: 700 !important;
+                  letter-spacing: 0;
+                  // color: var(--text-black-color);
+
+                  --placeholder-color: var(--background-color) !important;
+                  --placeholder-opacity: 1;
+                  --placeholder-font-weight: 400 !important;
+               }
+            }
+         }
+      }
+
+      p {
+         margin: 0;
+         color: var(--text-dark-color);
+         font-size: 0.7rem;
+         letter-spacing: 0.5px;
+         font-weight: 400;
+      
+         span {
+            width: calc(100% - 49px);
+         }
+      }
+   }
+}
+

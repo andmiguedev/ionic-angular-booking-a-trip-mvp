@@ -4,6 +4,11 @@ import { AuthenticationGuard } from "./services/auth/authentication.guard";
 
 const routes: Routes = [
   {
+    path: "welcome",
+    loadChildren: () =>
+      import("./pages/welcome/welcome.module").then((m) => m.WelcomePageModule),
+  },
+  {
     path: "pages",
     loadChildren: "./pages/pages.module#PagesPageModule",
     canLoad: [AuthenticationGuard],
@@ -12,11 +17,6 @@ const routes: Routes = [
     path: "",
     redirectTo: "pages",
     pathMatch: "full",
-  },
-  {
-    path: "welcome",
-    loadChildren: () =>
-      import("./pages/welcome/welcome.module").then((m) => m.WelcomePageModule),
   },
 ];
 
