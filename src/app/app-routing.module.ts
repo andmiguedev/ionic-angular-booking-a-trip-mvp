@@ -9,14 +9,19 @@ const routes: Routes = [
       import("./pages/welcome/welcome.module").then((m) => m.WelcomePageModule),
   },
   {
-    path: "pages",
-    loadChildren: "./pages/pages.module#PagesPageModule",
-    canLoad: [AuthenticationGuard],
+    path: "signup",
+    loadChildren: () =>
+      import("./pages/signup/signup.module").then((m) => m.SignupPageModule),
   },
   {
     path: "",
-    redirectTo: "pages",
+    redirectTo: "welcome",
     pathMatch: "full",
+  },
+  {
+    path: "protected",
+    loadChildren: "./pages/protected/protected.module#ProtectedPageModule",
+    canLoad: [AuthenticationGuard],
   },
 ];
 
